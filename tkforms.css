@@ -12,9 +12,11 @@ label {
   line-height: 28px;
   height: 28px;
   vertical-align: middle;
+  outline: none;
 }
 textarea {
   font-family: monospace;
+  outline: none;
 }
 /* EXTRA SIZES */
 .x-small {
@@ -47,24 +49,24 @@ select {
   cursor: pointer;
   display: inline-block;
   box-sizing: border-box;
-  background-color: #ddd;
-  background: linear-gradient(to bottom, #eeeeee, #cccccc);
   height: 28px;
   line-height: 28px;
   border-width: 1px;
   border-style: solid;
-  border-color: #b8b8b8;
   border-radius: 3px;
-  box-shadow: inset 0 0 2px #ffffff;
-  color: #585858;
   outline: none;
   white-space: normal;
-  text-shadow: 1px 1px 0 #eeeeee;
   text-decoration: none;
   margin: 0;
   padding: 0 .5em;
   vertical-align: middle;
   font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+  background-color: #ddd;
+  background: linear-gradient(to bottom, #eeeeee, #cccccc);
+  border-color: #b8b8b8;
+  box-shadow: inset 0 0 2px #ffffff;
+  text-shadow: 1px 1px 0 #eeeeee;
+  color: #585858;
 }
 input[type=button]:hover,
 input[type=submit]:hover,
@@ -82,6 +84,15 @@ button:active,
 a.button:active,
 select:active {
   background: linear-gradient(to top, #eeeeee, #cccccc);
+}
+input[type=button]:focus,
+input[type=submit]:focus,
+input[type=reset]:focus,
+button:focus,
+a.button:focus,
+select:focus {
+  border-color: #48d;
+  box-shadow: 0 0 5px rgba(68, 136, 221, 0.5);
 }
 input[type=button]:disabled,
 input[type=submit]:disabled,
@@ -106,35 +117,32 @@ input[type=submit].red,
 input[type=reset].red,
 button.red,
 a.button.red,
-select.red {
-  cursor: pointer;
-  display: inline-block;
-  box-sizing: border-box;
+select.red,
+input[type=button].warning,
+input[type=submit].warning,
+input[type=reset].warning,
+button.warning,
+a.button.warning,
+select.warning {
   background-color: #e55;
   background: linear-gradient(to bottom, #ff6666, #dd4444);
-  height: 28px;
-  line-height: 28px;
-  border-width: 1px;
-  border-style: solid;
   border-color: #c64747;
-  border-radius: 3px;
   box-shadow: inset 0 0 2px #ffffff;
-  color: #5f2222;
-  outline: none;
-  white-space: normal;
   text-shadow: 1px 1px 0 #ff6666;
-  text-decoration: none;
-  margin: 0;
-  padding: 0 .5em;
-  vertical-align: middle;
-  font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+  color: #5f2222;
 }
 input[type=button].red:hover,
 input[type=submit].red:hover,
 input[type=reset].red:hover,
 button.red:hover,
 a.button.red:hover,
-select.red:hover {
+select.red:hover,
+input[type=button].warning:hover,
+input[type=submit].warning:hover,
+input[type=reset].warning:hover,
+button.warning:hover,
+a.button.warning:hover,
+select.warning:hover {
   background: linear-gradient(to bottom, #ff7777, #e55);
   text-shadow: 1px 1px 0 #ff7777;
 }
@@ -143,8 +151,29 @@ input[type=submit].red:active,
 input[type=reset].red:active,
 button.red:active,
 a.button.red:active,
-select.red:active {
+select.red:active,
+input[type=button].warning:active,
+input[type=submit].warning:active,
+input[type=reset].warning:active,
+button.warning:active,
+a.button.warning:active,
+select.warning:active {
   background: linear-gradient(to top, #ff6666, #dd4444);
+}
+input[type=button].red:focus,
+input[type=submit].red:focus,
+input[type=reset].red:focus,
+button.red:focus,
+a.button.red:focus,
+select.red:focus,
+input[type=button].warning:focus,
+input[type=submit].warning:focus,
+input[type=reset].warning:focus,
+button.warning:focus,
+a.button.warning:focus,
+select.warning:focus {
+  border-color: #48d;
+  box-shadow: 0 0 5px rgba(68, 136, 221, 0.5);
 }
 input[type=button].red:disabled,
 input[type=submit].red:disabled,
@@ -152,12 +181,24 @@ input[type=reset].red:disabled,
 button.red:disabled,
 a.button.red:disabled,
 select.red:disabled,
+input[type=button].warning:disabled,
+input[type=submit].warning:disabled,
+input[type=reset].warning:disabled,
+button.warning:disabled,
+a.button.warning:disabled,
+select.warning:disabled,
 input[type=button].red[disabled],
 input[type=submit].red[disabled],
 input[type=reset].red[disabled],
 button.red[disabled],
 a.button.red[disabled],
-select.red[disabled] {
+select.red[disabled],
+input[type=button].warning[disabled],
+input[type=submit].warning[disabled],
+input[type=reset].warning[disabled],
+button.warning[disabled],
+a.button.warning[disabled],
+select.warning[disabled] {
   background: none;
   background-color: #e55;
   color: #9f3939;
@@ -169,35 +210,32 @@ input[type=submit].green,
 input[type=reset].green,
 button.green,
 a.button.green,
-select.green {
-  cursor: pointer;
-  display: inline-block;
-  box-sizing: border-box;
+select.green,
+input[type=button].ok,
+input[type=submit].ok,
+input[type=reset].ok,
+button.ok,
+a.button.ok,
+select.ok {
   background-color: #4d4;
   background: linear-gradient(to bottom, #55ee55, #33cc33);
-  height: 28px;
-  line-height: 28px;
-  border-width: 1px;
-  border-style: solid;
   border-color: #39b839;
-  border-radius: 3px;
   box-shadow: inset 0 0 2px #ccffcc;
-  color: #1b581b;
-  outline: none;
-  white-space: normal;
   text-shadow: 1px 1px 0 #55ee55;
-  text-decoration: none;
-  margin: 0;
-  padding: 0 .5em;
-  vertical-align: middle;
-  font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+  color: #1b581b;
 }
 input[type=button].green:hover,
 input[type=submit].green:hover,
 input[type=reset].green:hover,
 button.green:hover,
 a.button.green:hover,
-select.green:hover {
+select.green:hover,
+input[type=button].ok:hover,
+input[type=submit].ok:hover,
+input[type=reset].ok:hover,
+button.ok:hover,
+a.button.ok:hover,
+select.ok:hover {
   background: linear-gradient(to bottom, #66ff66, #4d4);
   text-shadow: 1px 1px 0 #66ff66;
 }
@@ -206,8 +244,29 @@ input[type=submit].green:active,
 input[type=reset].green:active,
 button.green:active,
 a.button.green:active,
-select.green:active {
+select.green:active,
+input[type=button].ok:active,
+input[type=submit].ok:active,
+input[type=reset].ok:active,
+button.ok:active,
+a.button.ok:active,
+select.ok:active {
   background: linear-gradient(to top, #55ee55, #33cc33);
+}
+input[type=button].green:focus,
+input[type=submit].green:focus,
+input[type=reset].green:focus,
+button.green:focus,
+a.button.green:focus,
+select.green:focus,
+input[type=button].ok:focus,
+input[type=submit].ok:focus,
+input[type=reset].ok:focus,
+button.ok:focus,
+a.button.ok:focus,
+select.ok:focus {
+  border-color: #48d;
+  box-shadow: 0 0 5px rgba(68, 136, 221, 0.5);
 }
 input[type=button].green:disabled,
 input[type=submit].green:disabled,
@@ -215,12 +274,24 @@ input[type=reset].green:disabled,
 button.green:disabled,
 a.button.green:disabled,
 select.green:disabled,
+input[type=button].ok:disabled,
+input[type=submit].ok:disabled,
+input[type=reset].ok:disabled,
+button.ok:disabled,
+a.button.ok:disabled,
+select.ok:disabled,
 input[type=button].green[disabled],
 input[type=submit].green[disabled],
 input[type=reset].green[disabled],
 button.green[disabled],
 a.button.green[disabled],
-select.green[disabled] {
+select.green[disabled],
+input[type=button].ok[disabled],
+input[type=submit].ok[disabled],
+input[type=reset].ok[disabled],
+button.ok[disabled],
+a.button.ok[disabled],
+select.ok[disabled] {
   background: none;
   background-color: #4d4;
   color: #2d932d;
@@ -233,27 +304,12 @@ input[type=reset].blue,
 button.blue,
 a.button.blue,
 select.blue {
-  cursor: pointer;
-  display: inline-block;
-  box-sizing: border-box;
   background-color: #6ae;
   background: linear-gradient(to bottom, #77bbff, #5599dd);
-  height: 28px;
-  line-height: 28px;
-  border-width: 1px;
-  border-style: solid;
   border-color: #558ec6;
-  border-radius: 3px;
   box-shadow: inset 0 0 2px #ffffff;
-  color: #29445f;
-  outline: none;
-  white-space: normal;
   text-shadow: 1px 1px 0 #77bbff;
-  text-decoration: none;
-  margin: 0;
-  padding: 0 .5em;
-  vertical-align: middle;
-  font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+  color: #29445f;
 }
 input[type=button].blue:hover,
 input[type=submit].blue:hover,
@@ -271,6 +327,15 @@ button.blue:active,
 a.button.blue:active,
 select.blue:active {
   background: linear-gradient(to top, #77bbff, #5599dd);
+}
+input[type=button].blue:focus,
+input[type=submit].blue:focus,
+input[type=reset].blue:focus,
+button.blue:focus,
+a.button.blue:focus,
+select.blue:focus {
+  border-color: #48d;
+  box-shadow: 0 0 5px rgba(68, 136, 221, 0.5);
 }
 input[type=button].blue:disabled,
 input[type=submit].blue:disabled,
@@ -296,27 +361,12 @@ input[type=reset].lime,
 button.lime,
 a.button.lime,
 select.lime {
-  cursor: pointer;
-  display: inline-block;
-  box-sizing: border-box;
   background-color: #be4;
   background: linear-gradient(to bottom, #ccff55, #aadd33);
-  height: 28px;
-  line-height: 28px;
-  border-width: 1px;
-  border-style: solid;
   border-color: #9cc639;
-  border-radius: 3px;
   box-shadow: inset 0 0 2px #ffffcc;
-  color: #4b5f1b;
-  outline: none;
-  white-space: normal;
   text-shadow: 1px 1px 0 #ccff55;
-  text-decoration: none;
-  margin: 0;
-  padding: 0 .5em;
-  vertical-align: middle;
-  font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+  color: #4b5f1b;
 }
 input[type=button].lime:hover,
 input[type=submit].lime:hover,
@@ -334,6 +384,15 @@ button.lime:active,
 a.button.lime:active,
 select.lime:active {
   background: linear-gradient(to top, #ccff55, #aadd33);
+}
+input[type=button].lime:focus,
+input[type=submit].lime:focus,
+input[type=reset].lime:focus,
+button.lime:focus,
+a.button.lime:focus,
+select.lime:focus {
+  border-color: #48d;
+  box-shadow: 0 0 5px rgba(68, 136, 221, 0.5);
 }
 input[type=button].lime:disabled,
 input[type=submit].lime:disabled,
@@ -359,27 +418,12 @@ input[type=reset].orange,
 button.orange,
 a.button.orange,
 select.orange {
-  cursor: pointer;
-  display: inline-block;
-  box-sizing: border-box;
-  background-color: #ea0;
-  background: linear-gradient(to bottom, #ffbb11, #dd9900);
-  height: 28px;
-  line-height: 28px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #c68e00;
-  border-radius: 3px;
-  box-shadow: inset 0 0 2px #ffff00;
-  color: #5f4400;
-  outline: none;
-  white-space: normal;
-  text-shadow: 1px 1px 0 #ffbb11;
-  text-decoration: none;
-  margin: 0;
-  padding: 0 .5em;
-  vertical-align: middle;
-  font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+  background-color: #ea2;
+  background: linear-gradient(to bottom, #ffbb33, #dd9911);
+  border-color: #c68e1c;
+  box-shadow: inset 0 0 2px #ffff66;
+  text-shadow: 1px 1px 0 #ffbb33;
+  color: #5f440e;
 }
 input[type=button].orange:hover,
 input[type=submit].orange:hover,
@@ -387,8 +431,8 @@ input[type=reset].orange:hover,
 button.orange:hover,
 a.button.orange:hover,
 select.orange:hover {
-  background: linear-gradient(to bottom, #ffcc22, #ea0);
-  text-shadow: 1px 1px 0 #ffcc22;
+  background: linear-gradient(to bottom, #ffcc44, #ea2);
+  text-shadow: 1px 1px 0 #ffcc44;
 }
 input[type=button].orange:active,
 input[type=submit].orange:active,
@@ -396,7 +440,16 @@ input[type=reset].orange:active,
 button.orange:active,
 a.button.orange:active,
 select.orange:active {
-  background: linear-gradient(to top, #ffbb11, #dd9900);
+  background: linear-gradient(to top, #ffbb33, #dd9911);
+}
+input[type=button].orange:focus,
+input[type=submit].orange:focus,
+input[type=reset].orange:focus,
+button.orange:focus,
+a.button.orange:focus,
+select.orange:focus {
+  border-color: #48d;
+  box-shadow: 0 0 5px rgba(68, 136, 221, 0.5);
 }
 input[type=button].orange:disabled,
 input[type=submit].orange:disabled,
@@ -411,8 +464,65 @@ button.orange[disabled],
 a.button.orange[disabled],
 select.orange[disabled] {
   background: none;
-  background-color: #ea0;
-  color: #9f7100;
+  background-color: #ea2;
+  color: #9f7117;
+  cursor: not-allowed;
+  text-shadow: none;
+}
+input[type=button].obsidian,
+input[type=submit].obsidian,
+input[type=reset].obsidian,
+button.obsidian,
+a.button.obsidian,
+select.obsidian {
+  background-color: #334;
+  background: linear-gradient(to bottom, #444455, #222233);
+  border-color: #2b2b39;
+  box-shadow: inset 0 0 2px #9999cc;
+  text-shadow: 1px 1px 0 #444455;
+  color: #bbbbcc;
+}
+input[type=button].obsidian:hover,
+input[type=submit].obsidian:hover,
+input[type=reset].obsidian:hover,
+button.obsidian:hover,
+a.button.obsidian:hover,
+select.obsidian:hover {
+  background: linear-gradient(to bottom, #555566, #334);
+  text-shadow: 1px 1px 0 #555566;
+}
+input[type=button].obsidian:active,
+input[type=submit].obsidian:active,
+input[type=reset].obsidian:active,
+button.obsidian:active,
+a.button.obsidian:active,
+select.obsidian:active {
+  background: linear-gradient(to top, #444455, #222233);
+}
+input[type=button].obsidian:focus,
+input[type=submit].obsidian:focus,
+input[type=reset].obsidian:focus,
+button.obsidian:focus,
+a.button.obsidian:focus,
+select.obsidian:focus {
+  border-color: #48d;
+  box-shadow: 0 0 5px rgba(68, 136, 221, 0.5);
+}
+input[type=button].obsidian:disabled,
+input[type=submit].obsidian:disabled,
+input[type=reset].obsidian:disabled,
+button.obsidian:disabled,
+a.button.obsidian:disabled,
+select.obsidian:disabled,
+input[type=button].obsidian[disabled],
+input[type=submit].obsidian[disabled],
+input[type=reset].obsidian[disabled],
+button.obsidian[disabled],
+a.button.obsidian[disabled],
+select.obsidian[disabled] {
+  background: none;
+  background-color: #334;
+  color: #22222d;
   cursor: not-allowed;
   text-shadow: none;
 }
@@ -422,28 +532,12 @@ input[type=reset].black,
 button.black,
 a.button.black,
 select.black {
-  cursor: pointer;
-  display: inline-block;
-  box-sizing: border-box;
   background-color: #222;
   background: linear-gradient(to bottom, #333333, #111111);
-  height: 28px;
-  line-height: 28px;
-  border-width: 1px;
-  border-style: solid;
   border-color: #1c1c1c;
-  border-radius: 3px;
   box-shadow: inset 0 0 2px #666666;
-  color: #0e0e0e;
-  outline: none;
-  white-space: normal;
   text-shadow: 1px 1px 0 #333333;
-  text-decoration: none;
-  margin: 0;
-  padding: 0 .5em;
-  vertical-align: middle;
-  font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
-  color: #aaa;
+  color: #aaaaaa;
 }
 input[type=button].black:hover,
 input[type=submit].black:hover,
@@ -461,6 +555,15 @@ button.black:active,
 a.button.black:active,
 select.black:active {
   background: linear-gradient(to top, #333333, #111111);
+}
+input[type=button].black:focus,
+input[type=submit].black:focus,
+input[type=reset].black:focus,
+button.black:focus,
+a.button.black:focus,
+select.black:focus {
+  border-color: #48d;
+  box-shadow: 0 0 5px rgba(68, 136, 221, 0.5);
 }
 input[type=button].black:disabled,
 input[type=submit].black:disabled,
@@ -600,38 +703,56 @@ label.x-big,
   line-height: 40px;
 }
 /* TEXT INPUTS */
-input[type=text] {
+input[type=text],
+input[type=password] {
   border-color: #939393;
   border-width: 1px;
   border-style: solid;
   border-radius: 3px;
+  box-sizing: border-box;
   background-color: #fff;
+  border-color: #b8b8b8;
   padding: 0 .3em;
+  font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
 }
-input[type=text]:disabled {
+input[type=text]:disabled,
+input[type=password]:disabled {
   background-color: #ddd;
   color: #939393;
 }
+input[type=text]:focus,
+input[type=password]:focus {
+  border-color: #48d;
+  box-shadow: 0 0 5px rgba(68, 136, 221, 0.5);
+}
 input[type=text].x-small,
-.x-small input[type=text] {
+input[type=password].x-small,
+.x-small input[type=text],
+.x-small input[type=password] {
   font-size: 10px;
   height: 20px;
   line-height: 20px;
 }
 input[type=text].small,
-.small input[type=text] {
+input[type=password].small,
+.small input[type=text],
+.small input[type=password] {
   font-size: 11px;
   height: 24px;
   line-height: 24px;
 }
 input[type=text].big,
-.big input[type=text] {
+input[type=password].big,
+.big input[type=text],
+.big input[type=password] {
   font-size: 15px;
   height: 32px;
   line-height: 32px;
 }
 input[type=text].x-big,
-.x-big input[type=text] {
+input[type=password].x-big,
+.x-big input[type=text],
+.x-big input[type=password] {
   font-size: 18px;
   height: 40px;
   line-height: 40px;
@@ -641,12 +762,19 @@ textarea {
   border-width: 1px;
   border-style: solid;
   border-radius: 3px;
+  box-sizing: border-box;
   background-color: #fff;
+  border-color: #b8b8b8;
   padding: 0 .3em;
+  font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
 }
 textarea:disabled {
   background-color: #ddd;
   color: #939393;
+}
+textarea:focus {
+  border-color: #48d;
+  box-shadow: 0 0 5px rgba(68, 136, 221, 0.5);
 }
 :disabled,
 .disabled,
@@ -656,4 +784,24 @@ textarea:disabled {
 }
 div.toolstrip {
   margin: 10px 0;
+}
+.control-group {
+  display: inline-block;
+  vertical-align: middle;
+}
+.control-group a,
+.control-group button,
+.control-group input {
+  float: left;
+  border-radius: 0px;
+  border-right-width: 0;
+}
+.control-group :first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.control-group :last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-right-width: 1px;
 }

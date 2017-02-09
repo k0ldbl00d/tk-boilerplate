@@ -11,7 +11,7 @@
   </head>
   <body class="tkforms">
     <h1>Buttons</h1>
-      <a class="button">a.button</a>
+      <a class="button">Button Link</a>
       <input type="submit" />
       <input type="reset" />
       <input type="button" value="input type=button" />
@@ -22,9 +22,10 @@
       <a class="button blue">Test blue</a>
       <a class="button orange">Test orange</a>
       <a class="button lime">Test lime</a>
+      <a class="button obsidian">Test obsidian</a>
       <a class="button black">Test black</a>
-      <a class="button" disabled>Disabled</a>
-      <button disabled>button</button>
+      <a class="button" disabled>Disabled Link</a>
+      <button disabled>Disabled Button</button>
     <h1>Sizes</h1>
       <a class="button x-small">Smaller</a>
       <a class="button small">Small</a>
@@ -36,11 +37,10 @@
       <input type="checkbox" id="check2" /><label for="check2">Checkbox 2</label><br />
       <input type="checkbox" id="check3" /><label for="check3">Checkbox 3</label><br />
 
-      <div class="toolstrip x-small">
+      <div class="toolstrip">
         <input type="radio" id="radio1" name="rad1" /><label for="radio1">Radio 1</label>
         <input type="radio" id="radio2" name="rad1" /><label for="radio2">Radio 2</label>
         <input type="radio" id="radio3" name="rad1" /><label for="radio3">Radio 3</label>
-        <a class="button" href="">Smaller</a>
       </div>
 
     <h1>Select</h1>
@@ -66,11 +66,24 @@
     </div>
 
     <div>
-      <textarea cols="80" rows="20">Textarea</textarea>
+      <textarea cols="80" rows="5">Textarea</textarea>
     </div>
 
     <div>
-      <textarea cols="80" rows="20" disabled>Textarea</textarea>
+      <textarea cols="80" rows="5" disabled>Textarea</textarea>
+    </div>
+
+    <div class="toolstrip">
+      <div class="control-group">
+        <a class="button">One</a>
+        <a class="button">Two</a>
+        <a class="button">Three</a>
+      </div>
+      <a class="button">Four not in group</a>
+      <div class="control-group">
+        <input type="text" placeholder="And even inputs!" /> <a class="button">Search</a>
+      </div>
+      <input type="password" />
     </div>
 
   </body>
