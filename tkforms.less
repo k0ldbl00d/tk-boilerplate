@@ -1,0 +1,162 @@
+/*
+  Author:   Kirill Shmakov <k0ldbl00d@gmail.com>
+  Date:     2017-02-09
+*/
+
+/* VARIABLES */
+@litegrey: #ddd;
+@red: #e55;
+@blue: #6ae;
+@green: #4d4;
+@lime: #be4;
+@orange: #ea0;
+@black: #222;
+
+/* COMMON SETTINGS  */
+input,
+a.button,
+label
+{
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  line-height: 28px;
+  height: 28px;
+  vertical-align: middle;
+}
+
+textarea {
+  font-family: monospace;
+}
+
+/* EXTRA SIZES */
+.x-small { font-size: 10px; height: 20px; line-height: 20px; }
+.small { font-size: 11px; height: 24px; line-height: 24px; }
+.big { font-size: 15px; height: 32px; line-height: 32px; }
+.x-big { font-size: 18px; height: 40px; line-height: 40px; }
+
+/* BUTTONS */
+.tk-button(@basecolor: @litegrey)
+{
+  @lighter: @basecolor + #111;
+  @darker: @basecolor - #111;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: @basecolor;
+  background: linear-gradient(to bottom,@lighter,@darker);
+  height: 28px;
+  line-height: 28px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: @basecolor/1.2;
+  border-radius: 3px;
+  box-shadow: inset 0 0 2px @basecolor*3;
+  color: @basecolor/2.5;
+  outline: none;
+  white-space: normal;
+  text-shadow: 1px 1px 0 @basecolor+#111;
+  text-decoration: none;
+  margin: 0;
+  padding: 0 .5em;
+  vertical-align: middle;
+  font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+
+  &:hover {
+    @lighter: @basecolor + #222;
+    @darker: @basecolor;
+    background: linear-gradient(to bottom,@lighter,@darker);
+    text-shadow: 1px 1px 0 @basecolor+#222;
+  }
+  &:active {
+    @lighter: @basecolor + #111;
+    @darker: @basecolor - #111;
+    background: linear-gradient(to top,@lighter,@darker);
+  }
+  &:disabled, &[disabled] {
+    background: none;
+    background-color: @basecolor;
+    color: @basecolor/1.5;
+    cursor: not-allowed;
+    text-shadow: none;
+  }
+}
+
+input[type=button],
+input[type=submit],
+input[type=reset],
+button,
+a.button,
+select {
+  .tk-button();
+  &.red { .tk-button(@red); }
+  &.green { .tk-button(@green); }
+  &.blue { .tk-button(@blue); }
+  &.lime { .tk-button(@lime); }
+  &.orange { .tk-button(@orange); }
+  &.black { .tk-button(@black); color: #aaa; }
+  &.x-small, .x-small & { .x-small; }
+  &.small, .small & { .small; }
+  &.big, .big & { .big; }
+  &.x-big, .x-big & { .x-big; }
+}
+
+/* CHECKBOX, RADIO */
+input[type=checkbox],
+input[type=radio]
+{
+  width: 20px;
+  height: 20px;
+  line-height: 28px;
+  .x-small & { width: 14px; height: 14px; line-height: 20px; }
+  .small & { width: 16px; height: 16px; line-height: 24px; }
+  .big & { width: 24px; height: 24px; line-height: 32px; }
+  .x-big & { width: 30px; height: 30px; line-height: 40px; }
+}
+
+label {
+  &.x-small, .x-small & { .x-small; }
+  &.small, .small & { .small; }
+  &.big, .big & { .big; }
+  &.x-big, .x-big & { .x-big; }
+}
+
+/* TEXT INPUTS */
+.textinput(@basecolor: @litegrey)
+{
+  border-color: @basecolor/1.5;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 0 .3em;
+  &:disabled {
+    background-color: @basecolor;
+    color: @basecolor/1.5;
+  }
+}
+
+.sizes()
+{
+  &.x-small, .x-small & { .x-small; }
+  &.small, .small & { .small; }
+  &.big, .big & { .big; }
+  &.x-big, .x-big & { .x-big; }
+}
+
+input[type=text] {
+  .textinput();
+  .sizes();
+}
+
+textarea {
+  .textinput();
+}
+
+:disabled, .disabled, [disabled] {
+  cursor: not-allowed!important;
+  text-shadow: none;
+}
+
+div.toolstrip {
+  margin: 10px 0;
+}

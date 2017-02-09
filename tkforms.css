@@ -1,0 +1,659 @@
+/*
+  Author:   Kirill Shmakov <k0ldbl00d@gmail.com>
+  Date:     2017-02-09
+*/
+/* VARIABLES */
+/* COMMON SETTINGS  */
+input,
+a.button,
+label {
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  line-height: 28px;
+  height: 28px;
+  vertical-align: middle;
+}
+textarea {
+  font-family: monospace;
+}
+/* EXTRA SIZES */
+.x-small {
+  font-size: 10px;
+  height: 20px;
+  line-height: 20px;
+}
+.small {
+  font-size: 11px;
+  height: 24px;
+  line-height: 24px;
+}
+.big {
+  font-size: 15px;
+  height: 32px;
+  line-height: 32px;
+}
+.x-big {
+  font-size: 18px;
+  height: 40px;
+  line-height: 40px;
+}
+/* BUTTONS */
+input[type=button],
+input[type=submit],
+input[type=reset],
+button,
+a.button,
+select {
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #ddd;
+  background: linear-gradient(to bottom, #eeeeee, #cccccc);
+  height: 28px;
+  line-height: 28px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #b8b8b8;
+  border-radius: 3px;
+  box-shadow: inset 0 0 2px #ffffff;
+  color: #585858;
+  outline: none;
+  white-space: normal;
+  text-shadow: 1px 1px 0 #eeeeee;
+  text-decoration: none;
+  margin: 0;
+  padding: 0 .5em;
+  vertical-align: middle;
+  font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+}
+input[type=button]:hover,
+input[type=submit]:hover,
+input[type=reset]:hover,
+button:hover,
+a.button:hover,
+select:hover {
+  background: linear-gradient(to bottom, #ffffff, #ddd);
+  text-shadow: 1px 1px 0 #ffffff;
+}
+input[type=button]:active,
+input[type=submit]:active,
+input[type=reset]:active,
+button:active,
+a.button:active,
+select:active {
+  background: linear-gradient(to top, #eeeeee, #cccccc);
+}
+input[type=button]:disabled,
+input[type=submit]:disabled,
+input[type=reset]:disabled,
+button:disabled,
+a.button:disabled,
+select:disabled,
+input[type=button][disabled],
+input[type=submit][disabled],
+input[type=reset][disabled],
+button[disabled],
+a.button[disabled],
+select[disabled] {
+  background: none;
+  background-color: #ddd;
+  color: #939393;
+  cursor: not-allowed;
+  text-shadow: none;
+}
+input[type=button].red,
+input[type=submit].red,
+input[type=reset].red,
+button.red,
+a.button.red,
+select.red {
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #e55;
+  background: linear-gradient(to bottom, #ff6666, #dd4444);
+  height: 28px;
+  line-height: 28px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c64747;
+  border-radius: 3px;
+  box-shadow: inset 0 0 2px #ffffff;
+  color: #5f2222;
+  outline: none;
+  white-space: normal;
+  text-shadow: 1px 1px 0 #ff6666;
+  text-decoration: none;
+  margin: 0;
+  padding: 0 .5em;
+  vertical-align: middle;
+  font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+}
+input[type=button].red:hover,
+input[type=submit].red:hover,
+input[type=reset].red:hover,
+button.red:hover,
+a.button.red:hover,
+select.red:hover {
+  background: linear-gradient(to bottom, #ff7777, #e55);
+  text-shadow: 1px 1px 0 #ff7777;
+}
+input[type=button].red:active,
+input[type=submit].red:active,
+input[type=reset].red:active,
+button.red:active,
+a.button.red:active,
+select.red:active {
+  background: linear-gradient(to top, #ff6666, #dd4444);
+}
+input[type=button].red:disabled,
+input[type=submit].red:disabled,
+input[type=reset].red:disabled,
+button.red:disabled,
+a.button.red:disabled,
+select.red:disabled,
+input[type=button].red[disabled],
+input[type=submit].red[disabled],
+input[type=reset].red[disabled],
+button.red[disabled],
+a.button.red[disabled],
+select.red[disabled] {
+  background: none;
+  background-color: #e55;
+  color: #9f3939;
+  cursor: not-allowed;
+  text-shadow: none;
+}
+input[type=button].green,
+input[type=submit].green,
+input[type=reset].green,
+button.green,
+a.button.green,
+select.green {
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #4d4;
+  background: linear-gradient(to bottom, #55ee55, #33cc33);
+  height: 28px;
+  line-height: 28px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #39b839;
+  border-radius: 3px;
+  box-shadow: inset 0 0 2px #ccffcc;
+  color: #1b581b;
+  outline: none;
+  white-space: normal;
+  text-shadow: 1px 1px 0 #55ee55;
+  text-decoration: none;
+  margin: 0;
+  padding: 0 .5em;
+  vertical-align: middle;
+  font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+}
+input[type=button].green:hover,
+input[type=submit].green:hover,
+input[type=reset].green:hover,
+button.green:hover,
+a.button.green:hover,
+select.green:hover {
+  background: linear-gradient(to bottom, #66ff66, #4d4);
+  text-shadow: 1px 1px 0 #66ff66;
+}
+input[type=button].green:active,
+input[type=submit].green:active,
+input[type=reset].green:active,
+button.green:active,
+a.button.green:active,
+select.green:active {
+  background: linear-gradient(to top, #55ee55, #33cc33);
+}
+input[type=button].green:disabled,
+input[type=submit].green:disabled,
+input[type=reset].green:disabled,
+button.green:disabled,
+a.button.green:disabled,
+select.green:disabled,
+input[type=button].green[disabled],
+input[type=submit].green[disabled],
+input[type=reset].green[disabled],
+button.green[disabled],
+a.button.green[disabled],
+select.green[disabled] {
+  background: none;
+  background-color: #4d4;
+  color: #2d932d;
+  cursor: not-allowed;
+  text-shadow: none;
+}
+input[type=button].blue,
+input[type=submit].blue,
+input[type=reset].blue,
+button.blue,
+a.button.blue,
+select.blue {
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #6ae;
+  background: linear-gradient(to bottom, #77bbff, #5599dd);
+  height: 28px;
+  line-height: 28px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #558ec6;
+  border-radius: 3px;
+  box-shadow: inset 0 0 2px #ffffff;
+  color: #29445f;
+  outline: none;
+  white-space: normal;
+  text-shadow: 1px 1px 0 #77bbff;
+  text-decoration: none;
+  margin: 0;
+  padding: 0 .5em;
+  vertical-align: middle;
+  font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+}
+input[type=button].blue:hover,
+input[type=submit].blue:hover,
+input[type=reset].blue:hover,
+button.blue:hover,
+a.button.blue:hover,
+select.blue:hover {
+  background: linear-gradient(to bottom, #88ccff, #6ae);
+  text-shadow: 1px 1px 0 #88ccff;
+}
+input[type=button].blue:active,
+input[type=submit].blue:active,
+input[type=reset].blue:active,
+button.blue:active,
+a.button.blue:active,
+select.blue:active {
+  background: linear-gradient(to top, #77bbff, #5599dd);
+}
+input[type=button].blue:disabled,
+input[type=submit].blue:disabled,
+input[type=reset].blue:disabled,
+button.blue:disabled,
+a.button.blue:disabled,
+select.blue:disabled,
+input[type=button].blue[disabled],
+input[type=submit].blue[disabled],
+input[type=reset].blue[disabled],
+button.blue[disabled],
+a.button.blue[disabled],
+select.blue[disabled] {
+  background: none;
+  background-color: #6ae;
+  color: #44719f;
+  cursor: not-allowed;
+  text-shadow: none;
+}
+input[type=button].lime,
+input[type=submit].lime,
+input[type=reset].lime,
+button.lime,
+a.button.lime,
+select.lime {
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #be4;
+  background: linear-gradient(to bottom, #ccff55, #aadd33);
+  height: 28px;
+  line-height: 28px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #9cc639;
+  border-radius: 3px;
+  box-shadow: inset 0 0 2px #ffffcc;
+  color: #4b5f1b;
+  outline: none;
+  white-space: normal;
+  text-shadow: 1px 1px 0 #ccff55;
+  text-decoration: none;
+  margin: 0;
+  padding: 0 .5em;
+  vertical-align: middle;
+  font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+}
+input[type=button].lime:hover,
+input[type=submit].lime:hover,
+input[type=reset].lime:hover,
+button.lime:hover,
+a.button.lime:hover,
+select.lime:hover {
+  background: linear-gradient(to bottom, #ddff66, #be4);
+  text-shadow: 1px 1px 0 #ddff66;
+}
+input[type=button].lime:active,
+input[type=submit].lime:active,
+input[type=reset].lime:active,
+button.lime:active,
+a.button.lime:active,
+select.lime:active {
+  background: linear-gradient(to top, #ccff55, #aadd33);
+}
+input[type=button].lime:disabled,
+input[type=submit].lime:disabled,
+input[type=reset].lime:disabled,
+button.lime:disabled,
+a.button.lime:disabled,
+select.lime:disabled,
+input[type=button].lime[disabled],
+input[type=submit].lime[disabled],
+input[type=reset].lime[disabled],
+button.lime[disabled],
+a.button.lime[disabled],
+select.lime[disabled] {
+  background: none;
+  background-color: #be4;
+  color: #7d9f2d;
+  cursor: not-allowed;
+  text-shadow: none;
+}
+input[type=button].orange,
+input[type=submit].orange,
+input[type=reset].orange,
+button.orange,
+a.button.orange,
+select.orange {
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #ea0;
+  background: linear-gradient(to bottom, #ffbb11, #dd9900);
+  height: 28px;
+  line-height: 28px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c68e00;
+  border-radius: 3px;
+  box-shadow: inset 0 0 2px #ffff00;
+  color: #5f4400;
+  outline: none;
+  white-space: normal;
+  text-shadow: 1px 1px 0 #ffbb11;
+  text-decoration: none;
+  margin: 0;
+  padding: 0 .5em;
+  vertical-align: middle;
+  font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+}
+input[type=button].orange:hover,
+input[type=submit].orange:hover,
+input[type=reset].orange:hover,
+button.orange:hover,
+a.button.orange:hover,
+select.orange:hover {
+  background: linear-gradient(to bottom, #ffcc22, #ea0);
+  text-shadow: 1px 1px 0 #ffcc22;
+}
+input[type=button].orange:active,
+input[type=submit].orange:active,
+input[type=reset].orange:active,
+button.orange:active,
+a.button.orange:active,
+select.orange:active {
+  background: linear-gradient(to top, #ffbb11, #dd9900);
+}
+input[type=button].orange:disabled,
+input[type=submit].orange:disabled,
+input[type=reset].orange:disabled,
+button.orange:disabled,
+a.button.orange:disabled,
+select.orange:disabled,
+input[type=button].orange[disabled],
+input[type=submit].orange[disabled],
+input[type=reset].orange[disabled],
+button.orange[disabled],
+a.button.orange[disabled],
+select.orange[disabled] {
+  background: none;
+  background-color: #ea0;
+  color: #9f7100;
+  cursor: not-allowed;
+  text-shadow: none;
+}
+input[type=button].black,
+input[type=submit].black,
+input[type=reset].black,
+button.black,
+a.button.black,
+select.black {
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #222;
+  background: linear-gradient(to bottom, #333333, #111111);
+  height: 28px;
+  line-height: 28px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #1c1c1c;
+  border-radius: 3px;
+  box-shadow: inset 0 0 2px #666666;
+  color: #0e0e0e;
+  outline: none;
+  white-space: normal;
+  text-shadow: 1px 1px 0 #333333;
+  text-decoration: none;
+  margin: 0;
+  padding: 0 .5em;
+  vertical-align: middle;
+  font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+  color: #aaa;
+}
+input[type=button].black:hover,
+input[type=submit].black:hover,
+input[type=reset].black:hover,
+button.black:hover,
+a.button.black:hover,
+select.black:hover {
+  background: linear-gradient(to bottom, #444444, #222);
+  text-shadow: 1px 1px 0 #444444;
+}
+input[type=button].black:active,
+input[type=submit].black:active,
+input[type=reset].black:active,
+button.black:active,
+a.button.black:active,
+select.black:active {
+  background: linear-gradient(to top, #333333, #111111);
+}
+input[type=button].black:disabled,
+input[type=submit].black:disabled,
+input[type=reset].black:disabled,
+button.black:disabled,
+a.button.black:disabled,
+select.black:disabled,
+input[type=button].black[disabled],
+input[type=submit].black[disabled],
+input[type=reset].black[disabled],
+button.black[disabled],
+a.button.black[disabled],
+select.black[disabled] {
+  background: none;
+  background-color: #222;
+  color: #171717;
+  cursor: not-allowed;
+  text-shadow: none;
+}
+input[type=button].x-small,
+input[type=submit].x-small,
+input[type=reset].x-small,
+button.x-small,
+a.button.x-small,
+select.x-small,
+.x-small input[type=button],
+.x-small input[type=submit],
+.x-small input[type=reset],
+.x-small button,
+.x-small a.button,
+.x-small select {
+  font-size: 10px;
+  height: 20px;
+  line-height: 20px;
+}
+input[type=button].small,
+input[type=submit].small,
+input[type=reset].small,
+button.small,
+a.button.small,
+select.small,
+.small input[type=button],
+.small input[type=submit],
+.small input[type=reset],
+.small button,
+.small a.button,
+.small select {
+  font-size: 11px;
+  height: 24px;
+  line-height: 24px;
+}
+input[type=button].big,
+input[type=submit].big,
+input[type=reset].big,
+button.big,
+a.button.big,
+select.big,
+.big input[type=button],
+.big input[type=submit],
+.big input[type=reset],
+.big button,
+.big a.button,
+.big select {
+  font-size: 15px;
+  height: 32px;
+  line-height: 32px;
+}
+input[type=button].x-big,
+input[type=submit].x-big,
+input[type=reset].x-big,
+button.x-big,
+a.button.x-big,
+select.x-big,
+.x-big input[type=button],
+.x-big input[type=submit],
+.x-big input[type=reset],
+.x-big button,
+.x-big a.button,
+.x-big select {
+  font-size: 18px;
+  height: 40px;
+  line-height: 40px;
+}
+/* CHECKBOX, RADIO */
+input[type=checkbox],
+input[type=radio] {
+  width: 20px;
+  height: 20px;
+  line-height: 28px;
+}
+.x-small input[type=checkbox],
+.x-small input[type=radio] {
+  width: 14px;
+  height: 14px;
+  line-height: 20px;
+}
+.small input[type=checkbox],
+.small input[type=radio] {
+  width: 16px;
+  height: 16px;
+  line-height: 24px;
+}
+.big input[type=checkbox],
+.big input[type=radio] {
+  width: 24px;
+  height: 24px;
+  line-height: 32px;
+}
+.x-big input[type=checkbox],
+.x-big input[type=radio] {
+  width: 30px;
+  height: 30px;
+  line-height: 40px;
+}
+label.x-small,
+.x-small label {
+  font-size: 10px;
+  height: 20px;
+  line-height: 20px;
+}
+label.small,
+.small label {
+  font-size: 11px;
+  height: 24px;
+  line-height: 24px;
+}
+label.big,
+.big label {
+  font-size: 15px;
+  height: 32px;
+  line-height: 32px;
+}
+label.x-big,
+.x-big label {
+  font-size: 18px;
+  height: 40px;
+  line-height: 40px;
+}
+/* TEXT INPUTS */
+input[type=text] {
+  border-color: #939393;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 0 .3em;
+}
+input[type=text]:disabled {
+  background-color: #ddd;
+  color: #939393;
+}
+input[type=text].x-small,
+.x-small input[type=text] {
+  font-size: 10px;
+  height: 20px;
+  line-height: 20px;
+}
+input[type=text].small,
+.small input[type=text] {
+  font-size: 11px;
+  height: 24px;
+  line-height: 24px;
+}
+input[type=text].big,
+.big input[type=text] {
+  font-size: 15px;
+  height: 32px;
+  line-height: 32px;
+}
+input[type=text].x-big,
+.x-big input[type=text] {
+  font-size: 18px;
+  height: 40px;
+  line-height: 40px;
+}
+textarea {
+  border-color: #939393;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 0 .3em;
+}
+textarea:disabled {
+  background-color: #ddd;
+  color: #939393;
+}
+:disabled,
+.disabled,
+[disabled] {
+  cursor: not-allowed !important;
+  text-shadow: none;
+}
+div.toolstrip {
+  margin: 10px 0;
+}
