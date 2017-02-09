@@ -663,6 +663,11 @@ input[type=radio] {
   height: 20px;
   line-height: 28px;
 }
+input[type=checkbox]:focus,
+input[type=radio]:focus {
+  border-color: #48d;
+  box-shadow: 0 0 5px rgba(68, 136, 221, 0.5);
+}
 .x-small input[type=checkbox],
 .x-small input[type=radio] {
   width: 14px;
@@ -802,7 +807,8 @@ div.toolstrip {
 }
 .control-group a,
 .control-group button,
-.control-group input {
+.control-group input,
+.control-group select {
   float: left;
   border-radius: 0px;
   border-right-width: 0;

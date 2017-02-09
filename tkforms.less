@@ -125,6 +125,10 @@ input[type=radio]
   width: 20px;
   height: 20px;
   line-height: 28px;
+  &:focus {
+    border-color: #48d;
+    box-shadow: 0 0 5px rgba(68,136,221,.5);
+  }
   .x-small & { width: 14px; height: 14px; line-height: 20px; }
   .small & { width: 16px; height: 16px; line-height: 24px; }
   .big & { width: 24px; height: 24px; line-height: 32px; }
@@ -193,7 +197,7 @@ div.toolstrip {
   vertical-align: middle;
 }
 
-.control-group a, .control-group button, .control-group input {
+.control-group a, .control-group button, .control-group input, .control-group select {
   float: left;
   border-radius: 0px;
   border-right-width: 0;
