@@ -14,6 +14,9 @@ label {
   vertical-align: middle;
   outline: none;
 }
+label {
+  cursor: pointer;
+}
 textarea {
   font-family: monospace;
   outline: none;
@@ -62,11 +65,11 @@ select {
   vertical-align: middle;
   font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
   background-color: #ddd;
-  background: linear-gradient(to bottom, #eeeeee, #cccccc);
+  background: linear-gradient(to bottom, #f7f7f7, #c4c4c4);
   border-color: #b8b8b8;
   box-shadow: inset 0 0 2px #ffffff;
-  text-shadow: 1px 1px 0 #eeeeee;
   color: #585858;
+  text-shadow: 1px 1px 0 #eeeeee;
 }
 input[type=button]:hover,
 input[type=submit]:hover,
@@ -124,12 +127,13 @@ input[type=reset].warning,
 button.warning,
 a.button.warning,
 select.warning {
-  background-color: #e55;
-  background: linear-gradient(to bottom, #ff6666, #dd4444);
-  border-color: #c64747;
-  box-shadow: inset 0 0 2px #ffffff;
-  text-shadow: 1px 1px 0 #ff6666;
-  color: #5f2222;
+  background-color: #d00;
+  background: linear-gradient(to bottom, #ff1111, #aa0000);
+  border-color: #b80000;
+  box-shadow: inset 0 0 2px #ff0000;
+  text-shadow: 1px 1px 0 #ee1111;
+  color: #ffdddd;
+  text-shadow: 1px 1px 0 #bb0000;
 }
 input[type=button].red:hover,
 input[type=submit].red:hover,
@@ -143,8 +147,8 @@ input[type=reset].warning:hover,
 button.warning:hover,
 a.button.warning:hover,
 select.warning:hover {
-  background: linear-gradient(to bottom, #ff7777, #e55);
-  text-shadow: 1px 1px 0 #ff7777;
+  background: linear-gradient(to bottom, #ff2222, #d00);
+  text-shadow: 1px 1px 0 #ff2222;
 }
 input[type=button].red:active,
 input[type=submit].red:active,
@@ -158,7 +162,7 @@ input[type=reset].warning:active,
 button.warning:active,
 a.button.warning:active,
 select.warning:active {
-  background: linear-gradient(to top, #ff6666, #dd4444);
+  background: linear-gradient(to top, #ee1111, #cc0000);
 }
 input[type=button].red:focus,
 input[type=submit].red:focus,
@@ -200,8 +204,8 @@ button.warning[disabled],
 a.button.warning[disabled],
 select.warning[disabled] {
   background: none;
-  background-color: #e55;
-  color: #9f3939;
+  background-color: #d00;
+  color: #930000;
   cursor: not-allowed;
   text-shadow: none;
 }
@@ -217,12 +221,13 @@ input[type=reset].ok,
 button.ok,
 a.button.ok,
 select.ok {
-  background-color: #4d4;
-  background: linear-gradient(to bottom, #55ee55, #33cc33);
-  border-color: #39b839;
-  box-shadow: inset 0 0 2px #ccffcc;
-  text-shadow: 1px 1px 0 #55ee55;
-  color: #1b581b;
+  background-color: #0a0;
+  background: linear-gradient(to bottom, #00dd00, #007700);
+  border-color: #008e00;
+  box-shadow: inset 0 0 2px #00ff00;
+  text-shadow: 1px 1px 0 #11bb11;
+  color: #aaffaa;
+  text-shadow: 1px 1px 0 #008800;
 }
 input[type=button].green:hover,
 input[type=submit].green:hover,
@@ -236,8 +241,8 @@ input[type=reset].ok:hover,
 button.ok:hover,
 a.button.ok:hover,
 select.ok:hover {
-  background: linear-gradient(to bottom, #66ff66, #4d4);
-  text-shadow: 1px 1px 0 #66ff66;
+  background: linear-gradient(to bottom, #22cc22, #0a0);
+  text-shadow: 1px 1px 0 #22cc22;
 }
 input[type=button].green:active,
 input[type=submit].green:active,
@@ -251,7 +256,7 @@ input[type=reset].ok:active,
 button.ok:active,
 a.button.ok:active,
 select.ok:active {
-  background: linear-gradient(to top, #55ee55, #33cc33);
+  background: linear-gradient(to top, #11bb11, #009900);
 }
 input[type=button].green:focus,
 input[type=submit].green:focus,
@@ -293,8 +298,8 @@ button.ok[disabled],
 a.button.ok[disabled],
 select.ok[disabled] {
   background: none;
-  background-color: #4d4;
-  color: #2d932d;
+  background-color: #0a0;
+  color: #007100;
   cursor: not-allowed;
   text-shadow: none;
 }
@@ -304,12 +309,13 @@ input[type=reset].blue,
 button.blue,
 a.button.blue,
 select.blue {
-  background-color: #6ae;
-  background: linear-gradient(to bottom, #77bbff, #5599dd);
-  border-color: #558ec6;
-  box-shadow: inset 0 0 2px #ffffff;
-  text-shadow: 1px 1px 0 #77bbff;
-  color: #29445f;
+  background-color: #26b;
+  background: linear-gradient(to bottom, #367fda, #1a4e90);
+  border-color: #1c559c;
+  box-shadow: inset 0 0 2px #66ffff;
+  text-shadow: 1px 1px 0 #3377cc;
+  color: #ddecff;
+  text-shadow: 1px 1px 0 #004499;
 }
 input[type=button].blue:hover,
 input[type=submit].blue:hover,
@@ -317,8 +323,8 @@ input[type=reset].blue:hover,
 button.blue:hover,
 a.button.blue:hover,
 select.blue:hover {
-  background: linear-gradient(to bottom, #88ccff, #6ae);
-  text-shadow: 1px 1px 0 #88ccff;
+  background: linear-gradient(to bottom, #4488dd, #26b);
+  text-shadow: 1px 1px 0 #4488dd;
 }
 input[type=button].blue:active,
 input[type=submit].blue:active,
@@ -326,7 +332,7 @@ input[type=reset].blue:active,
 button.blue:active,
 a.button.blue:active,
 select.blue:active {
-  background: linear-gradient(to top, #77bbff, #5599dd);
+  background: linear-gradient(to top, #3377cc, #1155aa);
 }
 input[type=button].blue:focus,
 input[type=submit].blue:focus,
@@ -350,8 +356,8 @@ button.blue[disabled],
 a.button.blue[disabled],
 select.blue[disabled] {
   background: none;
-  background-color: #6ae;
-  color: #44719f;
+  background-color: #26b;
+  color: #17447d;
   cursor: not-allowed;
   text-shadow: none;
 }
@@ -362,11 +368,11 @@ button.lime,
 a.button.lime,
 select.lime {
   background-color: #be4;
-  background: linear-gradient(to bottom, #ccff55, #aadd33);
+  background: linear-gradient(to bottom, #ccf273, #aaea15);
   border-color: #9cc639;
   box-shadow: inset 0 0 2px #ffffcc;
-  text-shadow: 1px 1px 0 #ccff55;
   color: #4b5f1b;
+  text-shadow: 1px 1px 0 #ccff55;
 }
 input[type=button].lime:hover,
 input[type=submit].lime:hover,
@@ -418,12 +424,13 @@ input[type=reset].orange,
 button.orange,
 a.button.orange,
 select.orange {
-  background-color: #ea2;
-  background: linear-gradient(to bottom, #ffbb33, #dd9911);
-  border-color: #c68e1c;
-  box-shadow: inset 0 0 2px #ffff66;
-  text-shadow: 1px 1px 0 #ffbb33;
-  color: #5f440e;
+  background-color: #e80;
+  background: linear-gradient(to bottom, #ffa022, #bb6b00);
+  border-color: #c67100;
+  box-shadow: inset 0 0 2px #ffff00;
+  text-shadow: 1px 1px 0 #ff9911;
+  color: #fff8ee;
+  text-shadow: 1px 1px 0 #cc6600;
 }
 input[type=button].orange:hover,
 input[type=submit].orange:hover,
@@ -431,8 +438,8 @@ input[type=reset].orange:hover,
 button.orange:hover,
 a.button.orange:hover,
 select.orange:hover {
-  background: linear-gradient(to bottom, #ffcc44, #ea2);
-  text-shadow: 1px 1px 0 #ffcc44;
+  background: linear-gradient(to bottom, #ffaa22, #e80);
+  text-shadow: 1px 1px 0 #ffaa22;
 }
 input[type=button].orange:active,
 input[type=submit].orange:active,
@@ -440,7 +447,7 @@ input[type=reset].orange:active,
 button.orange:active,
 a.button.orange:active,
 select.orange:active {
-  background: linear-gradient(to top, #ffbb33, #dd9911);
+  background: linear-gradient(to top, #ff9911, #dd7700);
 }
 input[type=button].orange:focus,
 input[type=submit].orange:focus,
@@ -464,8 +471,8 @@ button.orange[disabled],
 a.button.orange[disabled],
 select.orange[disabled] {
   background: none;
-  background-color: #ea2;
-  color: #9f7117;
+  background-color: #e80;
+  color: #9f5b00;
   cursor: not-allowed;
   text-shadow: none;
 }
@@ -476,11 +483,12 @@ button.obsidian,
 a.button.obsidian,
 select.obsidian {
   background-color: #334;
-  background: linear-gradient(to bottom, #444455, #222233);
+  background: linear-gradient(to bottom, #494961, #1d1d27);
   border-color: #2b2b39;
   box-shadow: inset 0 0 2px #9999cc;
   text-shadow: 1px 1px 0 #444455;
-  color: #bbbbcc;
+  color: #a8a8ce;
+  text-shadow: 1px 1px 0 #111122;
 }
 input[type=button].obsidian:hover,
 input[type=submit].obsidian:hover,
@@ -533,11 +541,12 @@ button.black,
 a.button.black,
 select.black {
   background-color: #222;
-  background: linear-gradient(to bottom, #333333, #111111);
+  background: linear-gradient(to bottom, #3c3c3c, #090909);
   border-color: #1c1c1c;
   box-shadow: inset 0 0 2px #666666;
   text-shadow: 1px 1px 0 #333333;
-  color: #aaaaaa;
+  color: #a2a2a2;
+  text-shadow: 1px 1px 0 #000000;
 }
 input[type=button].black:hover,
 input[type=submit].black:hover,
@@ -714,6 +723,7 @@ input[type=password] {
   border-color: #b8b8b8;
   padding: 0 .3em;
   font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+  cursor: text;
 }
 input[type=text]:disabled,
 input[type=password]:disabled {
@@ -767,6 +777,7 @@ textarea {
   border-color: #b8b8b8;
   padding: 0 .3em;
   font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+  cursor: text;
 }
 textarea:disabled {
   background-color: #ddd;

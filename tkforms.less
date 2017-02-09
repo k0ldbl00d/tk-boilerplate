@@ -5,11 +5,11 @@
 
 /* VARIABLES */
 @litegrey: #ddd;
-@red: #e55;
-@blue: #6ae;
-@green: #4d4;
+@red: #d00;
+@blue: #26b;
+@green: #0a0;
 @lime: #be4;
-@orange: #ea2;
+@orange: #e80;
 @black: #222;
 @obsidian: #334;
 
@@ -24,6 +24,10 @@ label
   height: 28px;
   vertical-align: middle;
   outline: none;
+}
+
+label {
+  cursor: pointer;
 }
 
 textarea {
@@ -59,15 +63,15 @@ textarea {
 
 .buttoncolors(@basecolor: @litegrey)
 {
-  @lighter: @basecolor + #111;
-  @darker: @basecolor - #111;
+  @lighter: hsl(hue(@basecolor),saturation(@basecolor),lightness(@basecolor)+10);
+  @darker: hsl(hue(@basecolor),saturation(@basecolor),lightness(@basecolor)-10);
   background-color: @basecolor;
   background: linear-gradient(to bottom,@lighter,@darker);
   border-color: @basecolor/1.2;
   box-shadow: inset 0 0 2px @basecolor*3;
   text-shadow: 1px 1px 0 @basecolor+#111;
-  & when(lightness(@basecolor) > 50%) { color: @basecolor/2.5; }
-  & when(lightness(@basecolor) <= 50%) { color: @basecolor+#888; }
+  & when(luma(@basecolor) > 50%) { color: @basecolor/2.5; text-shadow: 1px 1px 0 (@basecolor + #111); }
+  & when(luma(@basecolor) <= 50%) { color: hsl(hue(@basecolor),saturation(@basecolor)*2,lightness(@basecolor)+50); text-shadow: 1px 1px 0 (@basecolor - #222); }
   &:hover {
     @lighter: @basecolor + #222;
     @darker: @basecolor;
@@ -151,6 +155,7 @@ label {
   border-color: @basecolor/1.2;
   padding: 0 .3em;
   font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+  cursor: text;
   &:disabled {
     background-color: @basecolor;
     color: @basecolor/1.5;
