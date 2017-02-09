@@ -1,7 +1,7 @@
 # TK-Boilerplate
 TK-Telecom WebApps CSS/HTML Patterns
 
-Written using LESS https://lesscss.org/
+Written using LESS http://lesscss.org/
 
 jQuery is required when using confirm.js
 
