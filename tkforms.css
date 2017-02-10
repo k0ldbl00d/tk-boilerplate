@@ -22,7 +22,7 @@ textarea {
   outline: none;
 }
 /* EXTRA SIZES */
-.x-small {
+.smaller {
   font-size: 10px;
   height: 20px;
   line-height: 20px;
@@ -37,7 +37,7 @@ textarea {
   height: 32px;
   line-height: 32px;
 }
-.x-big {
+.bigger {
   font-size: 18px;
   height: 40px;
   line-height: 40px;
@@ -584,18 +584,18 @@ select.black[disabled] {
   cursor: not-allowed;
   text-shadow: none;
 }
-input[type=button].x-small,
-input[type=submit].x-small,
-input[type=reset].x-small,
-button.x-small,
-a.button.x-small,
-select.x-small,
-.x-small input[type=button],
-.x-small input[type=submit],
-.x-small input[type=reset],
-.x-small button,
-.x-small a.button,
-.x-small select {
+input[type=button].smaller,
+input[type=submit].smaller,
+input[type=reset].smaller,
+button.smaller,
+a.button.smaller,
+select.smaller,
+.smaller input[type=button],
+.smaller input[type=submit],
+.smaller input[type=reset],
+.smaller button,
+.smaller a.button,
+.smaller select {
   font-size: 10px;
   height: 20px;
   line-height: 20px;
@@ -632,18 +632,18 @@ select.big,
   height: 32px;
   line-height: 32px;
 }
-input[type=button].x-big,
-input[type=submit].x-big,
-input[type=reset].x-big,
-button.x-big,
-a.button.x-big,
-select.x-big,
-.x-big input[type=button],
-.x-big input[type=submit],
-.x-big input[type=reset],
-.x-big button,
-.x-big a.button,
-.x-big select {
+input[type=button].bigger,
+input[type=submit].bigger,
+input[type=reset].bigger,
+button.bigger,
+a.button.bigger,
+select.bigger,
+.bigger input[type=button],
+.bigger input[type=submit],
+.bigger input[type=reset],
+.bigger button,
+.bigger a.button,
+.bigger select {
   font-size: 18px;
   height: 40px;
   line-height: 40px;
@@ -660,8 +660,8 @@ input[type=radio]:focus {
   border-color: #48d;
   box-shadow: 0 0 5px rgba(68, 136, 221, 0.5);
 }
-.x-small input[type=checkbox],
-.x-small input[type=radio] {
+.smaller input[type=checkbox],
+.smaller input[type=radio] {
   width: 14px;
   height: 14px;
   line-height: 20px;
@@ -678,14 +678,14 @@ input[type=radio]:focus {
   height: 24px;
   line-height: 32px;
 }
-.x-big input[type=checkbox],
-.x-big input[type=radio] {
+.bigger input[type=checkbox],
+.bigger input[type=radio] {
   width: 30px;
   height: 30px;
   line-height: 40px;
 }
-label.x-small,
-.x-small label {
+label.smaller,
+.smaller label {
   font-size: 10px;
   height: 20px;
   line-height: 20px;
@@ -702,8 +702,8 @@ label.big,
   height: 32px;
   line-height: 32px;
 }
-label.x-big,
-.x-big label {
+label.bigger,
+.bigger label {
   font-size: 18px;
   height: 40px;
   line-height: 40px;
@@ -732,10 +732,10 @@ input[type=password]:focus {
   border-color: #48d;
   box-shadow: 0 0 5px rgba(68, 136, 221, 0.5);
 }
-input[type=text].x-small,
-input[type=password].x-small,
-.x-small input[type=text],
-.x-small input[type=password] {
+input[type=text].smaller,
+input[type=password].smaller,
+.smaller input[type=text],
+.smaller input[type=password] {
   font-size: 10px;
   height: 20px;
   line-height: 20px;
@@ -756,10 +756,10 @@ input[type=password].big,
   height: 32px;
   line-height: 32px;
 }
-input[type=text].x-big,
-input[type=password].x-big,
-.x-big input[type=text],
-.x-big input[type=password] {
+input[type=text].bigger,
+input[type=password].bigger,
+.bigger input[type=text],
+.bigger input[type=password] {
   font-size: 18px;
   height: 40px;
   line-height: 40px;

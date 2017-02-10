@@ -36,10 +36,10 @@ textarea {
 }
 
 /* EXTRA SIZES */
-.x-small { font-size: 10px; height: 20px; line-height: 20px; }
+.smaller { font-size: 10px; height: 20px; line-height: 20px; }
 .small { font-size: 11px; height: 24px; line-height: 24px; }
 .big { font-size: 15px; height: 32px; line-height: 32px; }
-.x-big { font-size: 18px; height: 40px; line-height: 40px; }
+.bigger { font-size: 18px; height: 40px; line-height: 40px; }
 
 /* BUTTONS */
 .tk-button()
@@ -112,10 +112,10 @@ select {
   &.obsidian { .buttoncolors(@obsidian); }
   &.black { .buttoncolors(@black); }
 
-  &.x-small, .x-small & { .x-small; }
+  &.smaller, .smaller & { .smaller; }
   &.small, .small & { .small; }
   &.big, .big & { .big; }
-  &.x-big, .x-big & { .x-big; }
+  &.bigger, .bigger & { .bigger; }
 }
 
 /* CHECKBOX, RADIO */
@@ -129,18 +129,18 @@ input[type=radio]
     border-color: #48d;
     box-shadow: 0 0 5px rgba(68,136,221,.5);
   }
-  .x-small & { width: 14px; height: 14px; line-height: 20px; }
+  .smaller & { width: 14px; height: 14px; line-height: 20px; }
   .small & { width: 16px; height: 16px; line-height: 24px; }
   .big & { width: 24px; height: 24px; line-height: 32px; }
-  .x-big & { width: 30px; height: 30px; line-height: 40px; }
+  .bigger & { width: 30px; height: 30px; line-height: 40px; }
 }
 
 .sizes()
 {
-  &.x-small, .x-small & { .x-small; }
+  &.smaller, .smaller & { .smaller; }
   &.small, .small & { .small; }
   &.big, .big & { .big; }
-  &.x-big, .x-big & { .x-big; }
+  &.bigger, .bigger & { .bigger; }
 }
 
 label {
