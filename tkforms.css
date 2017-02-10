@@ -147,7 +147,7 @@ button.warning:hover,
 a.button.warning:hover,
 select.warning:hover {
   background: linear-gradient(to bottom, #ff2222, #d00);
-  text-shadow: 1px 1px 0 #ff2222;
+  text-shadow: 1px 1px 0 #bb0000;
 }
 input[type=button].red:active,
 input[type=submit].red:active,
@@ -240,7 +240,7 @@ button.ok:hover,
 a.button.ok:hover,
 select.ok:hover {
   background: linear-gradient(to bottom, #22cc22, #0a0);
-  text-shadow: 1px 1px 0 #22cc22;
+  text-shadow: 1px 1px 0 #008800;
 }
 input[type=button].green:active,
 input[type=submit].green:active,
@@ -321,7 +321,7 @@ button.blue:hover,
 a.button.blue:hover,
 select.blue:hover {
   background: linear-gradient(to bottom, #4488dd, #26b);
-  text-shadow: 1px 1px 0 #4488dd;
+  text-shadow: 1px 1px 0 #004499;
 }
 input[type=button].blue:active,
 input[type=submit].blue:active,
@@ -434,7 +434,7 @@ button.orange:hover,
 a.button.orange:hover,
 select.orange:hover {
   background: linear-gradient(to bottom, #ffaa22, #e80);
-  text-shadow: 1px 1px 0 #ffaa22;
+  text-shadow: 1px 1px 0 #cc6600;
 }
 input[type=button].orange:active,
 input[type=submit].orange:active,
@@ -491,7 +491,7 @@ button.obsidian:hover,
 a.button.obsidian:hover,
 select.obsidian:hover {
   background: linear-gradient(to bottom, #555566, #334);
-  text-shadow: 1px 1px 0 #555566;
+  text-shadow: 1px 1px 0 #111122;
 }
 input[type=button].obsidian:active,
 input[type=submit].obsidian:active,
@@ -548,7 +548,7 @@ button.black:hover,
 a.button.black:hover,
 select.black:hover {
   background: linear-gradient(to bottom, #444444, #222);
-  text-shadow: 1px 1px 0 #444444;
+  text-shadow: 1px 1px 0 #000000;
 }
 input[type=button].black:active,
 input[type=submit].black:active,

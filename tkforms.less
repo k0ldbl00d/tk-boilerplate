@@ -76,7 +76,8 @@ textarea {
     @lighter: @basecolor + #222;
     @darker: @basecolor;
     background: linear-gradient(to bottom,@lighter,@darker);
-    text-shadow: 1px 1px 0 @basecolor+#222;
+    & when(luma(@basecolor) > 50%) { text-shadow: 1px 1px 0 @basecolor + #222; }
+    & when(luma(@basecolor) <= 50%) { text-shadow: 1px 1px 0 @basecolor - #222; }
   }
   &:active {
     @lighter: @basecolor + #111;
