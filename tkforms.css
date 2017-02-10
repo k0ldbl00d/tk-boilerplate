@@ -67,7 +67,7 @@ select {
   background-color: #ddd;
   background: linear-gradient(to bottom, #f7f7f7, #c4c4c4);
   border-color: #b8b8b8;
-  box-shadow: inset 0 0 3px #ffffff;
+  box-shadow: inset 0 0 2px #ffffff;
   color: #585858;
   text-shadow: 1px 1px 0 #eeeeee;
 }
@@ -129,7 +129,7 @@ select.warning {
   background-color: #d00;
   background: linear-gradient(to bottom, #ff1111, #aa0000);
   border-color: #b80000;
-  box-shadow: inset 0 0 3px #ff0000;
+  box-shadow: inset 0 0 2px #ff0000;
   text-shadow: 1px 1px 0 #ee1111;
   color: #ffdddd;
   text-shadow: 1px 1px 0 #bb0000;
@@ -222,7 +222,7 @@ select.ok {
   background-color: #0a0;
   background: linear-gradient(to bottom, #00dd00, #007700);
   border-color: #008e00;
-  box-shadow: inset 0 0 3px #00ff00;
+  box-shadow: inset 0 0 2px #00ff00;
   text-shadow: 1px 1px 0 #11bb11;
   color: #aaffaa;
   text-shadow: 1px 1px 0 #008800;
@@ -309,7 +309,7 @@ select.blue {
   background-color: #26b;
   background: linear-gradient(to bottom, #367fda, #1a4e90);
   border-color: #1c559c;
-  box-shadow: inset 0 0 3px #66ffff;
+  box-shadow: inset 0 0 2px #66ffff;
   text-shadow: 1px 1px 0 #3377cc;
   color: #ddecff;
   text-shadow: 1px 1px 0 #004499;
@@ -366,7 +366,7 @@ select.lime {
   background-color: #be4;
   background: linear-gradient(to bottom, #ccf273, #aaea15);
   border-color: #9cc639;
-  box-shadow: inset 0 0 3px #ffffcc;
+  box-shadow: inset 0 0 2px #ffffcc;
   color: #4b5f1b;
   text-shadow: 1px 1px 0 #ccff55;
 }
@@ -422,7 +422,7 @@ select.orange {
   background-color: #e80;
   background: linear-gradient(to bottom, #ffa022, #bb6b00);
   border-color: #c67100;
-  box-shadow: inset 0 0 3px #ffff00;
+  box-shadow: inset 0 0 2px #ffff00;
   text-shadow: 1px 1px 0 #ff9911;
   color: #fff8ee;
   text-shadow: 1px 1px 0 #cc6600;
@@ -479,7 +479,7 @@ select.obsidian {
   background-color: #334;
   background: linear-gradient(to bottom, #494961, #1d1d27);
   border-color: #2b2b39;
-  box-shadow: inset 0 0 3px #9999cc;
+  box-shadow: inset 0 0 2px #9999cc;
   text-shadow: 1px 1px 0 #444455;
   color: #a8a8ce;
   text-shadow: 1px 1px 0 #111122;
@@ -536,7 +536,7 @@ select.black {
   background-color: #222;
   background: linear-gradient(to bottom, #3c3c3c, #090909);
   border-color: #1c1c1c;
-  box-shadow: inset 0 0 3px #666666;
+  box-shadow: inset 0 0 2px #666666;
   text-shadow: 1px 1px 0 #333333;
   color: #a2a2a2;
   text-shadow: 1px 1px 0 #000000;

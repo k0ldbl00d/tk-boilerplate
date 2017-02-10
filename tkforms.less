@@ -68,7 +68,7 @@ textarea {
   background-color: @basecolor;
   background: linear-gradient(to bottom,@lighter,@darker);
   border-color: @basecolor/1.2;
-  box-shadow: inset 0 0 3px @basecolor*3;
+  box-shadow: inset 0 0 2px @basecolor*3;
   text-shadow: 1px 1px 0 @basecolor+#111;
   & when(luma(@basecolor) > 50%) { color: @basecolor/2.5; text-shadow: 1px 1px 0 (@basecolor + #111); }
   & when(luma(@basecolor) <= 50%) { color: hsl(hue(@basecolor),saturation(@basecolor)*2,lightness(@basecolor)+50); text-shadow: 1px 1px 0 (@basecolor - #222); }
