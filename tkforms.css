@@ -8,7 +8,6 @@ input,
 a.button,
 label {
   font-size: 13px;
-  font-family: sans-serif;
   line-height: 28px;
   height: 28px;
   vertical-align: middle;
@@ -63,7 +62,6 @@ select {
   margin: 0;
   padding: 0 .5em;
   vertical-align: middle;
-  font-family: sans-serif;
   background-color: #ddd;
   background: linear-gradient(to bottom, #f7f7f7, #c4c4c4);
   border-color: #b8b8b8;
@@ -719,7 +717,6 @@ input[type=password] {
   background-color: #fff;
   border-color: #b8b8b8;
   padding: 0 .3em;
-  font-family: sans-serif;
   cursor: text;
 }
 input[type=text]:disabled,
@@ -773,8 +770,8 @@ textarea {
   background-color: #fff;
   border-color: #b8b8b8;
   padding: 0 .3em;
-  font-family: sans-serif;
   cursor: text;
+  padding: .3em;
 }
 textarea:disabled {
   background-color: #ddd;

@@ -19,7 +19,7 @@ a.button,
 label
 {
   font-size: 13px;
-  font-family: sans-serif;
+  
   line-height: 28px;
   height: 28px;
   vertical-align: middle;
@@ -58,7 +58,7 @@ textarea {
   margin: 0;
   padding: 0 .5em;
   vertical-align: middle;
-  font-family: sans-serif;
+  
 }
 
 .buttoncolors(@basecolor: @litegrey)
@@ -158,7 +158,7 @@ label {
   background-color: #fff;
   border-color: @basecolor/1.2;
   padding: 0 .3em;
-  font-family: sans-serif;
+  
   cursor: text;
   &:disabled {
     background-color: @basecolor;
@@ -180,6 +180,7 @@ input[type=password] {
 
 textarea {
   .textinput();
+  padding: .3em;
 }
 
 :disabled, .disabled, [disabled] {
