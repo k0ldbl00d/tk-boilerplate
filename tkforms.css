@@ -7,9 +7,9 @@
 input,
 a.button,
 label {
-  font-size: 13px;
-  line-height: 28px;
-  height: 28px;
+  font-size: 11px;
+  line-height: 24px;
+  height: 26px;
   vertical-align: middle;
   outline: none;
 }
@@ -17,29 +17,35 @@ label {
   cursor: pointer;
 }
 textarea {
+  font-size: 11px;
   font-family: monospace;
   outline: none;
 }
 /* EXTRA SIZES */
 .smaller {
-  font-size: 10px;
+  font-size: 9px;
   height: 20px;
-  line-height: 20px;
+  line-height: 18px;
+}
+.small {
+  font-size: 10px;
+  height: 24px;
+  line-height: 22px;
 }
 .small {
   font-size: 11px;
-  height: 24px;
+  height: 26px;
   line-height: 24px;
 }
 .big {
   font-size: 15px;
   height: 32px;
-  line-height: 32px;
+  line-height: 30px;
 }
 .bigger {
   font-size: 18px;
   height: 40px;
-  line-height: 40px;
+  line-height: 38px;
 }
 /* BUTTONS */
 input[type=button],
@@ -51,8 +57,8 @@ select {
   cursor: pointer;
   display: inline-block;
   box-sizing: border-box;
-  height: 28px;
-  line-height: 28px;
+  height: 26px;
+  line-height: 24px;
   border-width: 1px;
   border-style: solid;
   border-radius: 3px;
@@ -62,12 +68,13 @@ select {
   margin: 0;
   padding: 0 .5em;
   vertical-align: middle;
-  background-color: #ddd;
-  background: linear-gradient(to bottom, #f7f7f7, #c4c4c4);
-  border-color: #b8b8b8;
+  font-size: 11px;
+  background-color: #f8f8f8;
+  background: linear-gradient(to bottom, #ffffff, #c6c6c6);
+  border-color: #b1b1b1;
   box-shadow: inset 0 0 2px #ffffff;
-  color: #585858;
-  text-shadow: 1px 1px 0 #eeeeee;
+  color: #000000;
+  text-shadow: 1px 1px 0 #e7e7e7;
 }
 input[type=button]:hover,
 input[type=submit]:hover,
@@ -75,7 +82,7 @@ input[type=reset]:hover,
 button:hover,
 a.button:hover,
 select:hover {
-  background: linear-gradient(to bottom, #ffffff, #ddd);
+  background: linear-gradient(to bottom, #ffffff, #f8f8f8);
   text-shadow: 1px 1px 0 #ffffff;
 }
 input[type=button]:active,
@@ -84,7 +91,7 @@ input[type=reset]:active,
 button:active,
 a.button:active,
 select:active {
-  box-shadow: inset 0 0 3px #939393;
+  box-shadow: inset 0 0 3px #a5a5a5;
 }
 input[type=button]:focus,
 input[type=submit]:focus,
@@ -92,7 +99,7 @@ input[type=reset]:focus,
 button:focus,
 a.button:focus,
 select:focus {
-  border-color: #6f6f6f;
+  border-color: #7c7c7c;
 }
 input[type=button]:disabled,
 input[type=submit]:disabled,
@@ -107,8 +114,8 @@ button[disabled],
 a.button[disabled],
 select[disabled] {
   background: none;
-  background-color: #ddd;
-  color: #939393;
+  background-color: #f8f8f8;
+  color: #a5a5a5;
   cursor: not-allowed;
   text-shadow: none;
 }
@@ -124,13 +131,12 @@ input[type=reset].warning,
 button.warning,
 a.button.warning,
 select.warning {
-  background-color: #d00;
-  background: linear-gradient(to bottom, #ff1111, #aa0000);
-  border-color: #b80000;
-  box-shadow: inset 0 0 2px #ff0000;
-  text-shadow: 1px 1px 0 #ee1111;
-  color: #ffdddd;
-  text-shadow: 1px 1px 0 #bb0000;
+  background-color: #d22;
+  background: linear-gradient(to bottom, #eb7a7a, #b11b1b);
+  border-color: #9e1818;
+  box-shadow: inset 0 0 2px #fff5f5;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 0 #b11b1b;
 }
 input[type=button].red:hover,
 input[type=submit].red:hover,
@@ -144,7 +150,7 @@ input[type=reset].warning:hover,
 button.warning:hover,
 a.button.warning:hover,
 select.warning:hover {
-  background: linear-gradient(to bottom, #ff2222, #d00);
+  background: linear-gradient(to bottom, #f1a7a7, #dd2222);
   text-shadow: 1px 1px 0 #bb0000;
 }
 input[type=button].red:active,
@@ -159,7 +165,7 @@ input[type=reset].warning:active,
 button.warning:active,
 a.button.warning:active,
 select.warning:active {
-  box-shadow: inset 0 0 3px #930000;
+  box-shadow: inset 0 0 3px #931717;
 }
 input[type=button].red:focus,
 input[type=submit].red:focus,
@@ -173,7 +179,7 @@ input[type=reset].warning:focus,
 button.warning:focus,
 a.button.warning:focus,
 select.warning:focus {
-  border-color: #6f0000;
+  border-color: #6f1111;
 }
 input[type=button].red:disabled,
 input[type=submit].red:disabled,
@@ -200,8 +206,8 @@ button.warning[disabled],
 a.button.warning[disabled],
 select.warning[disabled] {
   background: none;
-  background-color: #d00;
-  color: #930000;
+  background-color: #d22;
+  color: #931717;
   cursor: not-allowed;
   text-shadow: none;
 }
@@ -217,13 +223,12 @@ input[type=reset].ok,
 button.ok,
 a.button.ok,
 select.ok {
-  background-color: #0a0;
-  background: linear-gradient(to bottom, #00dd00, #007700);
-  border-color: #008e00;
-  box-shadow: inset 0 0 2px #00ff00;
-  text-shadow: 1px 1px 0 #11bb11;
-  color: #aaffaa;
-  text-shadow: 1px 1px 0 #008800;
+  background-color: #2a2;
+  background: linear-gradient(to bottom, #44da44, #1b881b);
+  border-color: #187918;
+  box-shadow: inset 0 0 2px #88ff88;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 0 #1b881b;
 }
 input[type=button].green:hover,
 input[type=submit].green:hover,
@@ -237,7 +242,7 @@ input[type=reset].ok:hover,
 button.ok:hover,
 a.button.ok:hover,
 select.ok:hover {
-  background: linear-gradient(to bottom, #22cc22, #0a0);
+  background: linear-gradient(to bottom, #66e066, #22aa22);
   text-shadow: 1px 1px 0 #008800;
 }
 input[type=button].green:active,
@@ -252,7 +257,7 @@ input[type=reset].ok:active,
 button.ok:active,
 a.button.ok:active,
 select.ok:active {
-  box-shadow: inset 0 0 3px #007100;
+  box-shadow: inset 0 0 3px #177117;
 }
 input[type=button].green:focus,
 input[type=submit].green:focus,
@@ -266,7 +271,7 @@ input[type=reset].ok:focus,
 button.ok:focus,
 a.button.ok:focus,
 select.ok:focus {
-  border-color: #005500;
+  border-color: #115511;
 }
 input[type=button].green:disabled,
 input[type=submit].green:disabled,
@@ -293,8 +298,8 @@ button.ok[disabled],
 a.button.ok[disabled],
 select.ok[disabled] {
   background: none;
-  background-color: #0a0;
-  color: #007100;
+  background-color: #2a2;
+  color: #177117;
   cursor: not-allowed;
   text-shadow: none;
 }
@@ -304,13 +309,12 @@ input[type=reset].blue,
 button.blue,
 a.button.blue,
 select.blue {
-  background-color: #26b;
-  background: linear-gradient(to bottom, #367fda, #1a4e90);
-  border-color: #1c559c;
-  box-shadow: inset 0 0 2px #66ffff;
-  text-shadow: 1px 1px 0 #3377cc;
-  color: #ddecff;
-  text-shadow: 1px 1px 0 #004499;
+  background-color: #28c;
+  background: linear-gradient(to bottom, #67b3e6, #1b6da3);
+  border-color: #186192;
+  box-shadow: inset 0 0 2px #cfffff;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 0 #1b6da3;
 }
 input[type=button].blue:hover,
 input[type=submit].blue:hover,
@@ -318,8 +322,8 @@ input[type=reset].blue:hover,
 button.blue:hover,
 a.button.blue:hover,
 select.blue:hover {
-  background: linear-gradient(to bottom, #4488dd, #26b);
-  text-shadow: 1px 1px 0 #004499;
+  background: linear-gradient(to bottom, #90c8ed, #2288cc);
+  text-shadow: 1px 1px 0 #0066aa;
 }
 input[type=button].blue:active,
 input[type=submit].blue:active,
@@ -327,7 +331,7 @@ input[type=reset].blue:active,
 button.blue:active,
 a.button.blue:active,
 select.blue:active {
-  box-shadow: inset 0 0 3px #17447d;
+  box-shadow: inset 0 0 3px #175b88;
 }
 input[type=button].blue:focus,
 input[type=submit].blue:focus,
@@ -335,7 +339,7 @@ input[type=reset].blue:focus,
 button.blue:focus,
 a.button.blue:focus,
 select.blue:focus {
-  border-color: #11335e;
+  border-color: #114466;
 }
 input[type=button].blue:disabled,
 input[type=submit].blue:disabled,
@@ -350,8 +354,8 @@ button.blue[disabled],
 a.button.blue[disabled],
 select.blue[disabled] {
   background: none;
-  background-color: #26b;
-  color: #17447d;
+  background-color: #28c;
+  color: #175b88;
   cursor: not-allowed;
   text-shadow: none;
 }
@@ -362,11 +366,11 @@ button.lime,
 a.button.lime,
 select.lime {
   background-color: #be4;
-  background: linear-gradient(to bottom, #ccf273, #aaea15);
-  border-color: #9cc639;
-  box-shadow: inset 0 0 2px #ffffcc;
-  color: #4b5f1b;
-  text-shadow: 1px 1px 0 #ccff55;
+  background: linear-gradient(to bottom, #e4f8b4, #a3e014);
+  border-color: #86aa31;
+  box-shadow: inset 0 0 2px #ffffff;
+  color: #000000;
+  text-shadow: 1px 1px 0 #aadd33;
 }
 input[type=button].lime:hover,
 input[type=submit].lime:hover,
@@ -374,7 +378,7 @@ input[type=reset].lime:hover,
 button.lime:hover,
 a.button.lime:hover,
 select.lime:hover {
-  background: linear-gradient(to bottom, #ddff66, #be4);
+  background: linear-gradient(to bottom, #f8fdec, #bbee44);
   text-shadow: 1px 1px 0 #ddff66;
 }
 input[type=button].lime:active,
@@ -418,12 +422,11 @@ button.orange,
 a.button.orange,
 select.orange {
   background-color: #e80;
-  background: linear-gradient(to bottom, #ffa022, #bb6b00);
-  border-color: #c67100;
-  box-shadow: inset 0 0 2px #ffff00;
-  text-shadow: 1px 1px 0 #ff9911;
-  color: #fff8ee;
-  text-shadow: 1px 1px 0 #cc6600;
+  background: linear-gradient(to bottom, #ffb34e, #be6d00);
+  border-color: #aa6100;
+  box-shadow: inset 0 0 2px #ffff9c;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 0 #be6d00;
 }
 input[type=button].orange:hover,
 input[type=submit].orange:hover,
@@ -431,7 +434,7 @@ input[type=reset].orange:hover,
 button.orange:hover,
 a.button.orange:hover,
 select.orange:hover {
-  background: linear-gradient(to bottom, #ffaa22, #e80);
+  background: linear-gradient(to bottom, #ffc87e, #ee8800);
   text-shadow: 1px 1px 0 #cc6600;
 }
 input[type=button].orange:active,
@@ -474,13 +477,12 @@ input[type=reset].obsidian,
 button.obsidian,
 a.button.obsidian,
 select.obsidian {
-  background-color: #334;
-  background: linear-gradient(to bottom, #494961, #1d1d27);
-  border-color: #2b2b39;
-  box-shadow: inset 0 0 2px #9999cc;
-  text-shadow: 1px 1px 0 #444455;
-  color: #a8a8ce;
-  text-shadow: 1px 1px 0 #111122;
+  background-color: #558;
+  background: linear-gradient(to bottom, #8484b2, #44446d);
+  border-color: #3d3d61;
+  box-shadow: inset 0 0 2px #ffffff;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 0 #44446d;
 }
 input[type=button].obsidian:hover,
 input[type=submit].obsidian:hover,
@@ -488,8 +490,8 @@ input[type=reset].obsidian:hover,
 button.obsidian:hover,
 a.button.obsidian:hover,
 select.obsidian:hover {
-  background: linear-gradient(to bottom, #555566, #334);
-  text-shadow: 1px 1px 0 #111122;
+  background: linear-gradient(to bottom, #9f9fc3, #555588);
+  text-shadow: 1px 1px 0 #333366;
 }
 input[type=button].obsidian:active,
 input[type=submit].obsidian:active,
@@ -497,7 +499,7 @@ input[type=reset].obsidian:active,
 button.obsidian:active,
 a.button.obsidian:active,
 select.obsidian:active {
-  box-shadow: inset 0 0 3px #22222d;
+  box-shadow: inset 0 0 3px #39395b;
 }
 input[type=button].obsidian:focus,
 input[type=submit].obsidian:focus,
@@ -505,7 +507,7 @@ input[type=reset].obsidian:focus,
 button.obsidian:focus,
 a.button.obsidian:focus,
 select.obsidian:focus {
-  border-color: #1a1a22;
+  border-color: #2b2b44;
 }
 input[type=button].obsidian:disabled,
 input[type=submit].obsidian:disabled,
@@ -520,8 +522,8 @@ button.obsidian[disabled],
 a.button.obsidian[disabled],
 select.obsidian[disabled] {
   background: none;
-  background-color: #334;
-  color: #22222d;
+  background-color: #558;
+  color: #39395b;
   cursor: not-allowed;
   text-shadow: none;
 }
@@ -531,13 +533,12 @@ input[type=reset].black,
 button.black,
 a.button.black,
 select.black {
-  background-color: #222;
-  background: linear-gradient(to bottom, #3c3c3c, #090909);
-  border-color: #1c1c1c;
-  box-shadow: inset 0 0 2px #666666;
-  text-shadow: 1px 1px 0 #333333;
-  color: #a2a2a2;
-  text-shadow: 1px 1px 0 #000000;
+  background-color: #333;
+  background: linear-gradient(to bottom, #474747, #292929);
+  border-color: #242424;
+  box-shadow: inset 0 0 2px #8f8f8f;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 0 #292929;
 }
 input[type=button].black:hover,
 input[type=submit].black:hover,
@@ -545,8 +546,8 @@ input[type=reset].black:hover,
 button.black:hover,
 a.button.black:hover,
 select.black:hover {
-  background: linear-gradient(to bottom, #444444, #222);
-  text-shadow: 1px 1px 0 #000000;
+  background: linear-gradient(to bottom, #525252, #333333);
+  text-shadow: 1px 1px 0 #111111;
 }
 input[type=button].black:active,
 input[type=submit].black:active,
@@ -554,7 +555,7 @@ input[type=reset].black:active,
 button.black:active,
 a.button.black:active,
 select.black:active {
-  box-shadow: inset 0 0 3px #171717;
+  box-shadow: inset 0 0 3px #222222;
 }
 input[type=button].black:focus,
 input[type=submit].black:focus,
@@ -562,7 +563,7 @@ input[type=reset].black:focus,
 button.black:focus,
 a.button.black:focus,
 select.black:focus {
-  border-color: #111111;
+  border-color: #1a1a1a;
 }
 input[type=button].black:disabled,
 input[type=submit].black:disabled,
@@ -577,8 +578,8 @@ button.black[disabled],
 a.button.black[disabled],
 select.black[disabled] {
   background: none;
-  background-color: #222;
-  color: #171717;
+  background-color: #333;
+  color: #222222;
   cursor: not-allowed;
   text-shadow: none;
 }
@@ -594,9 +595,9 @@ select.smaller,
 .smaller button,
 .smaller a.button,
 .smaller select {
-  font-size: 10px;
+  font-size: 9px;
   height: 20px;
-  line-height: 20px;
+  line-height: 18px;
 }
 input[type=button].small,
 input[type=submit].small,
@@ -610,8 +611,11 @@ select.small,
 .small button,
 .small a.button,
 .small select {
-  font-size: 11px;
+  font-size: 10px;
   height: 24px;
+  line-height: 22px;
+  font-size: 11px;
+  height: 26px;
   line-height: 24px;
 }
 input[type=button].big,
@@ -628,7 +632,7 @@ select.big,
 .big select {
   font-size: 15px;
   height: 32px;
-  line-height: 32px;
+  line-height: 30px;
 }
 input[type=button].bigger,
 input[type=submit].bigger,
@@ -644,7 +648,7 @@ select.bigger,
 .bigger select {
   font-size: 18px;
   height: 40px;
-  line-height: 40px;
+  line-height: 38px;
 }
 /* CHECKBOX, RADIO */
 input[type=checkbox],
@@ -684,45 +688,47 @@ input[type=radio]:focus {
 }
 label.smaller,
 .smaller label {
-  font-size: 10px;
+  font-size: 9px;
   height: 20px;
-  line-height: 20px;
+  line-height: 18px;
 }
 label.small,
 .small label {
-  font-size: 11px;
+  font-size: 10px;
   height: 24px;
+  line-height: 22px;
+  font-size: 11px;
+  height: 26px;
   line-height: 24px;
 }
 label.big,
 .big label {
   font-size: 15px;
   height: 32px;
-  line-height: 32px;
+  line-height: 30px;
 }
 label.bigger,
 .bigger label {
   font-size: 18px;
   height: 40px;
-  line-height: 40px;
+  line-height: 38px;
 }
 /* TEXT INPUTS */
 input[type=text],
 input[type=password] {
-  border-color: #939393;
   border-width: 1px;
   border-style: solid;
   border-radius: 3px;
   box-sizing: border-box;
   background-color: #fff;
-  border-color: #b8b8b8;
+  border-color: #b1b1b1;
   padding: 0 .3em;
   cursor: text;
 }
 input[type=text]:disabled,
 input[type=password]:disabled {
-  background-color: #ddd;
-  color: #939393;
+  background-color: #f8f8f8;
+  color: #a5a5a5;
 }
 input[type=text]:focus,
 input[type=password]:focus {
@@ -733,16 +739,19 @@ input[type=text].smaller,
 input[type=password].smaller,
 .smaller input[type=text],
 .smaller input[type=password] {
-  font-size: 10px;
+  font-size: 9px;
   height: 20px;
-  line-height: 20px;
+  line-height: 18px;
 }
 input[type=text].small,
 input[type=password].small,
 .small input[type=text],
 .small input[type=password] {
-  font-size: 11px;
+  font-size: 10px;
   height: 24px;
+  line-height: 22px;
+  font-size: 11px;
+  height: 26px;
   line-height: 24px;
 }
 input[type=text].big,
@@ -751,7 +760,7 @@ input[type=password].big,
 .big input[type=password] {
   font-size: 15px;
   height: 32px;
-  line-height: 32px;
+  line-height: 30px;
 }
 input[type=text].bigger,
 input[type=password].bigger,
@@ -759,23 +768,22 @@ input[type=password].bigger,
 .bigger input[type=password] {
   font-size: 18px;
   height: 40px;
-  line-height: 40px;
+  line-height: 38px;
 }
 textarea {
-  border-color: #939393;
   border-width: 1px;
   border-style: solid;
   border-radius: 3px;
   box-sizing: border-box;
   background-color: #fff;
-  border-color: #b8b8b8;
+  border-color: #b1b1b1;
   padding: 0 .3em;
   cursor: text;
   padding: .3em;
 }
 textarea:disabled {
-  background-color: #ddd;
-  color: #939393;
+  background-color: #f8f8f8;
+  color: #a5a5a5;
 }
 textarea:focus {
   border-color: #48d;
