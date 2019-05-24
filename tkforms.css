@@ -5,47 +5,58 @@
 /* VARIABLES */
 /* COMMON SETTINGS  */
 input,
+button,
 a.button,
 label {
-  font-size: 11px;
-  line-height: 24px;
-  height: 26px;
+  font-size: 13px;
+  line-height: 28px;
+  height: 30px;
   vertical-align: middle;
   outline: none;
+  z-index: 9999;
 }
-label {
+input:hover,
+button:hover,
+a.button:hover,
+label:hover {
+  z-index: 10000;
+}
+label,
+button,
+input[type=button],
+a.button {
   cursor: pointer;
 }
 textarea {
-  font-size: 11px;
+  font-size: 13px;
   font-family: monospace;
   outline: none;
 }
 /* EXTRA SIZES */
 .smaller {
-  font-size: 9px;
-  height: 20px;
-  line-height: 18px;
+  font-size: 10.4px;
+  height: 24.8px;
+  line-height: 22.8px;
 }
 .small {
-  font-size: 10px;
-  height: 24px;
-  line-height: 22px;
+  font-size: 11.7px;
+  height: 27.4px;
+  line-height: 25.4px;
 }
-.small {
-  font-size: 11px;
-  height: 26px;
-  line-height: 24px;
+.normal {
+  font-size: 13px;
+  height: 30px;
+  line-height: 28px;
 }
 .big {
-  font-size: 15px;
-  height: 32px;
-  line-height: 30px;
+  font-size: 15.6px;
+  height: 35.2px;
+  line-height: 33.2px;
 }
 .bigger {
-  font-size: 18px;
-  height: 40px;
-  line-height: 38px;
+  font-size: 19.5px;
+  height: 43px;
+  line-height: 41px;
 }
 /* BUTTONS */
 input[type=button],
@@ -57,24 +68,48 @@ select {
   cursor: pointer;
   display: inline-block;
   box-sizing: border-box;
-  height: 26px;
-  line-height: 24px;
+  height: 30px;
+  line-height: 28px;
   border-width: 1px;
   border-style: solid;
-  border-radius: 3px;
+  border-radius: 0.3em;
   outline: none;
   white-space: normal;
   text-decoration: none;
   margin: 0;
-  padding: 0 .5em;
+  padding: 0 0.5em;
   vertical-align: middle;
-  font-size: 11px;
-  background-color: #f8f8f8;
-  background: linear-gradient(to bottom, #ffffff, #c6c6c6);
-  border-color: #b1b1b1;
+  font-size: 13px;
+  background-color: #eee;
+  background: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(0, 0%, 74.66666667%));
+  border-color: #aaaaaa;
+  color: hsl(0, 0%, 0%);
+  text-shadow: 1px 1px 0 #dddddd;
+}
+input[type=button].flat,
+input[type=submit].flat,
+input[type=reset].flat,
+button.flat,
+a.button.flat,
+select.flat,
+.flat input[type=button],
+.flat input[type=submit],
+.flat input[type=reset],
+.flat button,
+.flat a.button,
+.flat select {
+  border: none;
+  box-shadow: 0 0 2px 1;
+  background: #eee;
+  text-shadow: none;
+}
+input[type=button] :not(.flat),
+input[type=submit] :not(.flat),
+input[type=reset] :not(.flat),
+button :not(.flat),
+a.button :not(.flat),
+select :not(.flat) {
   box-shadow: inset 0 0 2px #ffffff;
-  color: #000000;
-  text-shadow: 1px 1px 0 #e7e7e7;
 }
 input[type=button]:hover,
 input[type=submit]:hover,
@@ -82,16 +117,52 @@ input[type=reset]:hover,
 button:hover,
 a.button:hover,
 select:hover {
-  background: linear-gradient(to bottom, #ffffff, #f8f8f8);
+  background: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(0, 0%, 93.33333333%));
+}
+input[type=button]:hover.flat,
+input[type=submit]:hover.flat,
+input[type=reset]:hover.flat,
+button:hover.flat,
+a.button:hover.flat,
+select:hover.flat,
+.flat input[type=button]:hover,
+.flat input[type=submit]:hover,
+.flat input[type=reset]:hover,
+.flat button:hover,
+.flat a.button:hover,
+.flat select:hover {
+  background: linear-gradient(to bottom, #ffffff, #ffffff);
+  box-shadow: 0 0 0.2em #777777;
+}
+input[type=button]:hover:not(.flat),
+input[type=submit]:hover:not(.flat),
+input[type=reset]:hover:not(.flat),
+button:hover:not(.flat),
+a.button:hover:not(.flat),
+select:hover:not(.flat),
+:not(.flat) input[type=button]:hover,
+:not(.flat) input[type=submit]:hover,
+:not(.flat) input[type=reset]:hover,
+:not(.flat) button:hover,
+:not(.flat) a.button:hover,
+:not(.flat) select:hover {
   text-shadow: 1px 1px 0 #ffffff;
 }
-input[type=button]:active,
-input[type=submit]:active,
-input[type=reset]:active,
-button:active,
-a.button:active,
-select:active {
-  box-shadow: inset 0 0 3px #a5a5a5;
+input[type=button]:active :not(.flat),
+input[type=submit]:active :not(.flat),
+input[type=reset]:active :not(.flat),
+button:active :not(.flat),
+a.button:active :not(.flat),
+select:active :not(.flat) {
+  box-shadow: inset 0 0 3px #9f9f9f;
+}
+input[type=button]:active .flat,
+input[type=submit]:active .flat,
+input[type=reset]:active .flat,
+button:active .flat,
+a.button:active .flat,
+select:active .flat {
+  background: linear-gradient(to bottom, #dddddd, #dddddd);
 }
 input[type=button]:focus,
 input[type=submit]:focus,
@@ -99,7 +170,7 @@ input[type=reset]:focus,
 button:focus,
 a.button:focus,
 select:focus {
-  border-color: #7c7c7c;
+  border-color: #777777;
 }
 input[type=button]:disabled,
 input[type=submit]:disabled,
@@ -114,8 +185,8 @@ button[disabled],
 a.button[disabled],
 select[disabled] {
   background: none;
-  background-color: #f8f8f8;
-  color: #a5a5a5;
+  background-color: #eee;
+  color: #9f9f9f;
   cursor: not-allowed;
   text-shadow: none;
 }
@@ -132,11 +203,53 @@ button.warning,
 a.button.warning,
 select.warning {
   background-color: #d22;
-  background: linear-gradient(to bottom, #eb7a7a, #b11b1b);
+  background: linear-gradient(to bottom, hsl(0, 73.33333333%, 70%), hsl(0, 73.33333333%, 40%));
   border-color: #9e1818;
-  box-shadow: inset 0 0 2px #fff5f5;
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 1px 1px 0 #b11b1b;
+  text-shadow: 1px 1px 0 hsl(0, 73.33333333%, 40%);
+}
+input[type=button].red.flat,
+input[type=submit].red.flat,
+input[type=reset].red.flat,
+button.red.flat,
+a.button.red.flat,
+select.red.flat,
+input[type=button].warning.flat,
+input[type=submit].warning.flat,
+input[type=reset].warning.flat,
+button.warning.flat,
+a.button.warning.flat,
+select.warning.flat,
+.flat input[type=button].red,
+.flat input[type=submit].red,
+.flat input[type=reset].red,
+.flat button.red,
+.flat a.button.red,
+.flat select.red,
+.flat input[type=button].warning,
+.flat input[type=submit].warning,
+.flat input[type=reset].warning,
+.flat button.warning,
+.flat a.button.warning,
+.flat select.warning {
+  border: none;
+  box-shadow: 0 0 2px 1;
+  background: #d22;
+  text-shadow: none;
+}
+input[type=button].red :not(.flat),
+input[type=submit].red :not(.flat),
+input[type=reset].red :not(.flat),
+button.red :not(.flat),
+a.button.red :not(.flat),
+select.red :not(.flat),
+input[type=button].warning :not(.flat),
+input[type=submit].warning :not(.flat),
+input[type=reset].warning :not(.flat),
+button.warning :not(.flat),
+a.button.warning :not(.flat),
+select.warning :not(.flat) {
+  box-shadow: inset 0 0 2px #fff5f5;
 }
 input[type=button].red:hover,
 input[type=submit].red:hover,
@@ -150,22 +263,88 @@ input[type=reset].warning:hover,
 button.warning:hover,
 a.button.warning:hover,
 select.warning:hover {
-  background: linear-gradient(to bottom, #f1a7a7, #dd2222);
+  background: linear-gradient(to bottom, hsl(0, 73.33333333%, 80%), hsl(0, 73.33333333%, 50%));
+}
+input[type=button].red:hover.flat,
+input[type=submit].red:hover.flat,
+input[type=reset].red:hover.flat,
+button.red:hover.flat,
+a.button.red:hover.flat,
+select.red:hover.flat,
+input[type=button].warning:hover.flat,
+input[type=submit].warning:hover.flat,
+input[type=reset].warning:hover.flat,
+button.warning:hover.flat,
+a.button.warning:hover.flat,
+select.warning:hover.flat,
+.flat input[type=button].red:hover,
+.flat input[type=submit].red:hover,
+.flat input[type=reset].red:hover,
+.flat button.red:hover,
+.flat a.button.red:hover,
+.flat select.red:hover,
+.flat input[type=button].warning:hover,
+.flat input[type=submit].warning:hover,
+.flat input[type=reset].warning:hover,
+.flat button.warning:hover,
+.flat a.button.warning:hover,
+.flat select.warning:hover {
+  background: linear-gradient(to bottom, #f32525, #ff2c2c);
+  box-shadow: 0 0 0.2em #6f1111;
+}
+input[type=button].red:hover:not(.flat),
+input[type=submit].red:hover:not(.flat),
+input[type=reset].red:hover:not(.flat),
+button.red:hover:not(.flat),
+a.button.red:hover:not(.flat),
+select.red:hover:not(.flat),
+input[type=button].warning:hover:not(.flat),
+input[type=submit].warning:hover:not(.flat),
+input[type=reset].warning:hover:not(.flat),
+button.warning:hover:not(.flat),
+a.button.warning:hover:not(.flat),
+select.warning:hover:not(.flat),
+:not(.flat) input[type=button].red:hover,
+:not(.flat) input[type=submit].red:hover,
+:not(.flat) input[type=reset].red:hover,
+:not(.flat) button.red:hover,
+:not(.flat) a.button.red:hover,
+:not(.flat) select.red:hover,
+:not(.flat) input[type=button].warning:hover,
+:not(.flat) input[type=submit].warning:hover,
+:not(.flat) input[type=reset].warning:hover,
+:not(.flat) button.warning:hover,
+:not(.flat) a.button.warning:hover,
+:not(.flat) select.warning:hover {
   text-shadow: 1px 1px 0 #bb0000;
 }
-input[type=button].red:active,
-input[type=submit].red:active,
-input[type=reset].red:active,
-button.red:active,
-a.button.red:active,
-select.red:active,
-input[type=button].warning:active,
-input[type=submit].warning:active,
-input[type=reset].warning:active,
-button.warning:active,
-a.button.warning:active,
-select.warning:active {
+input[type=button].red:active :not(.flat),
+input[type=submit].red:active :not(.flat),
+input[type=reset].red:active :not(.flat),
+button.red:active :not(.flat),
+a.button.red:active :not(.flat),
+select.red:active :not(.flat),
+input[type=button].warning:active :not(.flat),
+input[type=submit].warning:active :not(.flat),
+input[type=reset].warning:active :not(.flat),
+button.warning:active :not(.flat),
+a.button.warning:active :not(.flat),
+select.warning:active :not(.flat) {
   box-shadow: inset 0 0 3px #931717;
+}
+input[type=button].red:active .flat,
+input[type=submit].red:active .flat,
+input[type=reset].red:active .flat,
+button.red:active .flat,
+a.button.red:active .flat,
+select.red:active .flat,
+input[type=button].warning:active .flat,
+input[type=submit].warning:active .flat,
+input[type=reset].warning:active .flat,
+button.warning:active .flat,
+a.button.warning:active .flat,
+select.warning:active .flat {
+  background: linear-gradient(to bottom, #cc1111, #cc1111);
 }
 input[type=button].red:focus,
 input[type=submit].red:focus,
@@ -224,11 +403,53 @@ button.ok,
 a.button.ok,
 select.ok {
   background-color: #2a2;
-  background: linear-gradient(to bottom, #44da44, #1b881b);
+  background: linear-gradient(to bottom, hsl(120, 66.66666667%, 56%), hsl(120, 66.66666667%, 32%));
   border-color: #187918;
-  box-shadow: inset 0 0 2px #88ff88;
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 1px 1px 0 #1b881b;
+  text-shadow: 1px 1px 0 hsl(120, 66.66666667%, 32%);
+}
+input[type=button].green.flat,
+input[type=submit].green.flat,
+input[type=reset].green.flat,
+button.green.flat,
+a.button.green.flat,
+select.green.flat,
+input[type=button].ok.flat,
+input[type=submit].ok.flat,
+input[type=reset].ok.flat,
+button.ok.flat,
+a.button.ok.flat,
+select.ok.flat,
+.flat input[type=button].green,
+.flat input[type=submit].green,
+.flat input[type=reset].green,
+.flat button.green,
+.flat a.button.green,
+.flat select.green,
+.flat input[type=button].ok,
+.flat input[type=submit].ok,
+.flat input[type=reset].ok,
+.flat button.ok,
+.flat a.button.ok,
+.flat select.ok {
+  border: none;
+  box-shadow: 0 0 2px 1;
+  background: #2a2;
+  text-shadow: none;
+}
+input[type=button].green :not(.flat),
+input[type=submit].green :not(.flat),
+input[type=reset].green :not(.flat),
+button.green :not(.flat),
+a.button.green :not(.flat),
+select.green :not(.flat),
+input[type=button].ok :not(.flat),
+input[type=submit].ok :not(.flat),
+input[type=reset].ok :not(.flat),
+button.ok :not(.flat),
+a.button.ok :not(.flat),
+select.ok :not(.flat) {
+  box-shadow: inset 0 0 2px #88ff88;
 }
 input[type=button].green:hover,
 input[type=submit].green:hover,
@@ -242,22 +463,88 @@ input[type=reset].ok:hover,
 button.ok:hover,
 a.button.ok:hover,
 select.ok:hover {
-  background: linear-gradient(to bottom, #66e066, #22aa22);
+  background: linear-gradient(to bottom, hsl(120, 66.66666667%, 64%), hsl(120, 66.66666667%, 40%));
+}
+input[type=button].green:hover.flat,
+input[type=submit].green:hover.flat,
+input[type=reset].green:hover.flat,
+button.green:hover.flat,
+a.button.green:hover.flat,
+select.green:hover.flat,
+input[type=button].ok:hover.flat,
+input[type=submit].ok:hover.flat,
+input[type=reset].ok:hover.flat,
+button.ok:hover.flat,
+a.button.ok:hover.flat,
+select.ok:hover.flat,
+.flat input[type=button].green:hover,
+.flat input[type=submit].green:hover,
+.flat input[type=reset].green:hover,
+.flat button.green:hover,
+.flat a.button.green:hover,
+.flat select.green:hover,
+.flat input[type=button].ok:hover,
+.flat input[type=submit].ok:hover,
+.flat input[type=reset].ok:hover,
+.flat button.ok:hover,
+.flat a.button.ok:hover,
+.flat select.ok:hover {
+  background: linear-gradient(to bottom, #25bb25, #2cdd2c);
+  box-shadow: 0 0 0.2em #115511;
+}
+input[type=button].green:hover:not(.flat),
+input[type=submit].green:hover:not(.flat),
+input[type=reset].green:hover:not(.flat),
+button.green:hover:not(.flat),
+a.button.green:hover:not(.flat),
+select.green:hover:not(.flat),
+input[type=button].ok:hover:not(.flat),
+input[type=submit].ok:hover:not(.flat),
+input[type=reset].ok:hover:not(.flat),
+button.ok:hover:not(.flat),
+a.button.ok:hover:not(.flat),
+select.ok:hover:not(.flat),
+:not(.flat) input[type=button].green:hover,
+:not(.flat) input[type=submit].green:hover,
+:not(.flat) input[type=reset].green:hover,
+:not(.flat) button.green:hover,
+:not(.flat) a.button.green:hover,
+:not(.flat) select.green:hover,
+:not(.flat) input[type=button].ok:hover,
+:not(.flat) input[type=submit].ok:hover,
+:not(.flat) input[type=reset].ok:hover,
+:not(.flat) button.ok:hover,
+:not(.flat) a.button.ok:hover,
+:not(.flat) select.ok:hover {
   text-shadow: 1px 1px 0 #008800;
 }
-input[type=button].green:active,
-input[type=submit].green:active,
-input[type=reset].green:active,
-button.green:active,
-a.button.green:active,
-select.green:active,
-input[type=button].ok:active,
-input[type=submit].ok:active,
-input[type=reset].ok:active,
-button.ok:active,
-a.button.ok:active,
-select.ok:active {
+input[type=button].green:active :not(.flat),
+input[type=submit].green:active :not(.flat),
+input[type=reset].green:active :not(.flat),
+button.green:active :not(.flat),
+a.button.green:active :not(.flat),
+select.green:active :not(.flat),
+input[type=button].ok:active :not(.flat),
+input[type=submit].ok:active :not(.flat),
+input[type=reset].ok:active :not(.flat),
+button.ok:active :not(.flat),
+a.button.ok:active :not(.flat),
+select.ok:active :not(.flat) {
   box-shadow: inset 0 0 3px #177117;
+}
+input[type=button].green:active .flat,
+input[type=submit].green:active .flat,
+input[type=reset].green:active .flat,
+button.green:active .flat,
+a.button.green:active .flat,
+select.green:active .flat,
+input[type=button].ok:active .flat,
+input[type=submit].ok:active .flat,
+input[type=reset].ok:active .flat,
+button.ok:active .flat,
+a.button.ok:active .flat,
+select.ok:active .flat {
+  background: linear-gradient(to bottom, #119911, #119911);
 }
 input[type=button].green:focus,
 input[type=submit].green:focus,
@@ -310,11 +597,35 @@ button.blue,
 a.button.blue,
 select.blue {
   background-color: #28c;
-  background: linear-gradient(to bottom, #67b3e6, #1b6da3);
+  background: linear-gradient(to bottom, hsl(204, 71.42857143%, 65.33333333%), hsl(204, 71.42857143%, 37.33333333%));
   border-color: #186192;
-  box-shadow: inset 0 0 2px #cfffff;
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 1px 1px 0 #1b6da3;
+  text-shadow: 1px 1px 0 hsl(204, 71.42857143%, 37.33333333%);
+}
+input[type=button].blue.flat,
+input[type=submit].blue.flat,
+input[type=reset].blue.flat,
+button.blue.flat,
+a.button.blue.flat,
+select.blue.flat,
+.flat input[type=button].blue,
+.flat input[type=submit].blue,
+.flat input[type=reset].blue,
+.flat button.blue,
+.flat a.button.blue,
+.flat select.blue {
+  border: none;
+  box-shadow: 0 0 2px 1;
+  background: #28c;
+  text-shadow: none;
+}
+input[type=button].blue :not(.flat),
+input[type=submit].blue :not(.flat),
+input[type=reset].blue :not(.flat),
+button.blue :not(.flat),
+a.button.blue :not(.flat),
+select.blue :not(.flat) {
+  box-shadow: inset 0 0 2px #cfffff;
 }
 input[type=button].blue:hover,
 input[type=submit].blue:hover,
@@ -322,16 +633,52 @@ input[type=reset].blue:hover,
 button.blue:hover,
 a.button.blue:hover,
 select.blue:hover {
-  background: linear-gradient(to bottom, #90c8ed, #2288cc);
+  background: linear-gradient(to bottom, hsl(204, 71.42857143%, 74.66666667%), hsl(204, 71.42857143%, 46.66666667%));
+}
+input[type=button].blue:hover.flat,
+input[type=submit].blue:hover.flat,
+input[type=reset].blue:hover.flat,
+button.blue:hover.flat,
+a.button.blue:hover.flat,
+select.blue:hover.flat,
+.flat input[type=button].blue:hover,
+.flat input[type=submit].blue:hover,
+.flat input[type=reset].blue:hover,
+.flat button.blue:hover,
+.flat a.button.blue:hover,
+.flat select.blue:hover {
+  background: linear-gradient(to bottom, #2596e0, #2cb1ff);
+  box-shadow: 0 0 0.2em #114466;
+}
+input[type=button].blue:hover:not(.flat),
+input[type=submit].blue:hover:not(.flat),
+input[type=reset].blue:hover:not(.flat),
+button.blue:hover:not(.flat),
+a.button.blue:hover:not(.flat),
+select.blue:hover:not(.flat),
+:not(.flat) input[type=button].blue:hover,
+:not(.flat) input[type=submit].blue:hover,
+:not(.flat) input[type=reset].blue:hover,
+:not(.flat) button.blue:hover,
+:not(.flat) a.button.blue:hover,
+:not(.flat) select.blue:hover {
   text-shadow: 1px 1px 0 #0066aa;
 }
-input[type=button].blue:active,
-input[type=submit].blue:active,
-input[type=reset].blue:active,
-button.blue:active,
-a.button.blue:active,
-select.blue:active {
+input[type=button].blue:active :not(.flat),
+input[type=submit].blue:active :not(.flat),
+input[type=reset].blue:active :not(.flat),
+button.blue:active :not(.flat),
+a.button.blue:active :not(.flat),
+select.blue:active :not(.flat) {
   box-shadow: inset 0 0 3px #175b88;
+}
+input[type=button].blue:active .flat,
+input[type=submit].blue:active .flat,
+input[type=reset].blue:active .flat,
+button.blue:active .flat,
+a.button.blue:active .flat,
+select.blue:active .flat {
+  background: linear-gradient(to bottom, #1177bb, #1177bb);
 }
 input[type=button].blue:focus,
 input[type=submit].blue:focus,
@@ -366,11 +713,35 @@ button.lime,
 a.button.lime,
 select.lime {
   background-color: #be4;
-  background: linear-gradient(to bottom, #e4f8b4, #a3e014);
+  background: linear-gradient(to bottom, hsl(78, 83.33333333%, 84%), hsl(78, 83.33333333%, 48%));
   border-color: #86aa31;
-  box-shadow: inset 0 0 2px #ffffff;
-  color: #000000;
+  color: hsl(0, 0%, 0%);
   text-shadow: 1px 1px 0 #aadd33;
+}
+input[type=button].lime.flat,
+input[type=submit].lime.flat,
+input[type=reset].lime.flat,
+button.lime.flat,
+a.button.lime.flat,
+select.lime.flat,
+.flat input[type=button].lime,
+.flat input[type=submit].lime,
+.flat input[type=reset].lime,
+.flat button.lime,
+.flat a.button.lime,
+.flat select.lime {
+  border: none;
+  box-shadow: 0 0 2px 1;
+  background: #be4;
+  text-shadow: none;
+}
+input[type=button].lime :not(.flat),
+input[type=submit].lime :not(.flat),
+input[type=reset].lime :not(.flat),
+button.lime :not(.flat),
+a.button.lime :not(.flat),
+select.lime :not(.flat) {
+  box-shadow: inset 0 0 2px #ffffff;
 }
 input[type=button].lime:hover,
 input[type=submit].lime:hover,
@@ -378,16 +749,52 @@ input[type=reset].lime:hover,
 button.lime:hover,
 a.button.lime:hover,
 select.lime:hover {
-  background: linear-gradient(to bottom, #f8fdec, #bbee44);
+  background: linear-gradient(to bottom, hsl(78, 83.33333333%, 96%), hsl(78, 83.33333333%, 60%));
+}
+input[type=button].lime:hover.flat,
+input[type=submit].lime:hover.flat,
+input[type=reset].lime:hover.flat,
+button.lime:hover.flat,
+a.button.lime:hover.flat,
+select.lime:hover.flat,
+.flat input[type=button].lime:hover,
+.flat input[type=submit].lime:hover,
+.flat input[type=reset].lime:hover,
+.flat button.lime:hover,
+.flat a.button.lime:hover,
+.flat select.lime:hover {
+  background: linear-gradient(to bottom, #ceff4b, #f3ff58);
+  box-shadow: 0 0 0.2em #5d7722;
+}
+input[type=button].lime:hover:not(.flat),
+input[type=submit].lime:hover:not(.flat),
+input[type=reset].lime:hover:not(.flat),
+button.lime:hover:not(.flat),
+a.button.lime:hover:not(.flat),
+select.lime:hover:not(.flat),
+:not(.flat) input[type=button].lime:hover,
+:not(.flat) input[type=submit].lime:hover,
+:not(.flat) input[type=reset].lime:hover,
+:not(.flat) button.lime:hover,
+:not(.flat) a.button.lime:hover,
+:not(.flat) select.lime:hover {
   text-shadow: 1px 1px 0 #ddff66;
 }
-input[type=button].lime:active,
-input[type=submit].lime:active,
-input[type=reset].lime:active,
-button.lime:active,
-a.button.lime:active,
-select.lime:active {
+input[type=button].lime:active :not(.flat),
+input[type=submit].lime:active :not(.flat),
+input[type=reset].lime:active :not(.flat),
+button.lime:active :not(.flat),
+a.button.lime:active :not(.flat),
+select.lime:active :not(.flat) {
   box-shadow: inset 0 0 3px #7d9f2d;
+}
+input[type=button].lime:active .flat,
+input[type=submit].lime:active .flat,
+input[type=reset].lime:active .flat,
+button.lime:active .flat,
+a.button.lime:active .flat,
+select.lime:active .flat {
+  background: linear-gradient(to bottom, #aadd33, #aadd33);
 }
 input[type=button].lime:focus,
 input[type=submit].lime:focus,
@@ -422,11 +829,35 @@ button.orange,
 a.button.orange,
 select.orange {
   background-color: #e80;
-  background: linear-gradient(to bottom, #ffb34e, #be6d00);
+  background: linear-gradient(to bottom, hsl(34.28571429, 100%, 65.33333333%), hsl(34.28571429, 100%, 37.33333333%));
   border-color: #aa6100;
-  box-shadow: inset 0 0 2px #ffff9c;
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 1px 1px 0 #be6d00;
+  text-shadow: 1px 1px 0 hsl(34.28571429, 100%, 37.33333333%);
+}
+input[type=button].orange.flat,
+input[type=submit].orange.flat,
+input[type=reset].orange.flat,
+button.orange.flat,
+a.button.orange.flat,
+select.orange.flat,
+.flat input[type=button].orange,
+.flat input[type=submit].orange,
+.flat input[type=reset].orange,
+.flat button.orange,
+.flat a.button.orange,
+.flat select.orange {
+  border: none;
+  box-shadow: 0 0 2px 1;
+  background: #e80;
+  text-shadow: none;
+}
+input[type=button].orange :not(.flat),
+input[type=submit].orange :not(.flat),
+input[type=reset].orange :not(.flat),
+button.orange :not(.flat),
+a.button.orange :not(.flat),
+select.orange :not(.flat) {
+  box-shadow: inset 0 0 2px #ffff9c;
 }
 input[type=button].orange:hover,
 input[type=submit].orange:hover,
@@ -434,16 +865,52 @@ input[type=reset].orange:hover,
 button.orange:hover,
 a.button.orange:hover,
 select.orange:hover {
-  background: linear-gradient(to bottom, #ffc87e, #ee8800);
+  background: linear-gradient(to bottom, hsl(34.28571429, 100%, 74.66666667%), hsl(34.28571429, 100%, 46.66666667%));
+}
+input[type=button].orange:hover.flat,
+input[type=submit].orange:hover.flat,
+input[type=reset].orange:hover.flat,
+button.orange:hover.flat,
+a.button.orange:hover.flat,
+select.orange:hover.flat,
+.flat input[type=button].orange:hover,
+.flat input[type=submit].orange:hover,
+.flat input[type=reset].orange:hover,
+.flat button.orange:hover,
+.flat a.button.orange:hover,
+.flat select.orange:hover {
+  background: linear-gradient(to bottom, #ff9600, #ffb100);
+  box-shadow: 0 0 0.2em #774400;
+}
+input[type=button].orange:hover:not(.flat),
+input[type=submit].orange:hover:not(.flat),
+input[type=reset].orange:hover:not(.flat),
+button.orange:hover:not(.flat),
+a.button.orange:hover:not(.flat),
+select.orange:hover:not(.flat),
+:not(.flat) input[type=button].orange:hover,
+:not(.flat) input[type=submit].orange:hover,
+:not(.flat) input[type=reset].orange:hover,
+:not(.flat) button.orange:hover,
+:not(.flat) a.button.orange:hover,
+:not(.flat) select.orange:hover {
   text-shadow: 1px 1px 0 #cc6600;
 }
-input[type=button].orange:active,
-input[type=submit].orange:active,
-input[type=reset].orange:active,
-button.orange:active,
-a.button.orange:active,
-select.orange:active {
+input[type=button].orange:active :not(.flat),
+input[type=submit].orange:active :not(.flat),
+input[type=reset].orange:active :not(.flat),
+button.orange:active :not(.flat),
+a.button.orange:active :not(.flat),
+select.orange:active :not(.flat) {
   box-shadow: inset 0 0 3px #9f5b00;
+}
+input[type=button].orange:active .flat,
+input[type=submit].orange:active .flat,
+input[type=reset].orange:active .flat,
+button.orange:active .flat,
+a.button.orange:active .flat,
+select.orange:active .flat {
+  background: linear-gradient(to bottom, #dd7700, #dd7700);
 }
 input[type=button].orange:focus,
 input[type=submit].orange:focus,
@@ -478,11 +945,35 @@ button.obsidian,
 a.button.obsidian,
 select.obsidian {
   background-color: #558;
-  background: linear-gradient(to bottom, #8484b2, #44446d);
+  background: linear-gradient(to bottom, hsl(240, 23.07692308%, 60.66666667%), hsl(240, 23.07692308%, 34.66666667%));
   border-color: #3d3d61;
-  box-shadow: inset 0 0 2px #ffffff;
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 1px 1px 0 #44446d;
+  text-shadow: 1px 1px 0 hsl(240, 23.07692308%, 34.66666667%);
+}
+input[type=button].obsidian.flat,
+input[type=submit].obsidian.flat,
+input[type=reset].obsidian.flat,
+button.obsidian.flat,
+a.button.obsidian.flat,
+select.obsidian.flat,
+.flat input[type=button].obsidian,
+.flat input[type=submit].obsidian,
+.flat input[type=reset].obsidian,
+.flat button.obsidian,
+.flat a.button.obsidian,
+.flat select.obsidian {
+  border: none;
+  box-shadow: 0 0 2px 1;
+  background: #558;
+  text-shadow: none;
+}
+input[type=button].obsidian :not(.flat),
+input[type=submit].obsidian :not(.flat),
+input[type=reset].obsidian :not(.flat),
+button.obsidian :not(.flat),
+a.button.obsidian :not(.flat),
+select.obsidian :not(.flat) {
+  box-shadow: inset 0 0 2px #ffffff;
 }
 input[type=button].obsidian:hover,
 input[type=submit].obsidian:hover,
@@ -490,16 +981,52 @@ input[type=reset].obsidian:hover,
 button.obsidian:hover,
 a.button.obsidian:hover,
 select.obsidian:hover {
-  background: linear-gradient(to bottom, #9f9fc3, #555588);
+  background: linear-gradient(to bottom, hsl(240, 23.07692308%, 69.33333333%), hsl(240, 23.07692308%, 43.33333333%));
+}
+input[type=button].obsidian:hover.flat,
+input[type=submit].obsidian:hover.flat,
+input[type=reset].obsidian:hover.flat,
+button.obsidian:hover.flat,
+a.button.obsidian:hover.flat,
+select.obsidian:hover.flat,
+.flat input[type=button].obsidian:hover,
+.flat input[type=submit].obsidian:hover,
+.flat input[type=reset].obsidian:hover,
+.flat button.obsidian:hover,
+.flat a.button.obsidian:hover,
+.flat select.obsidian:hover {
+  background: linear-gradient(to bottom, #5e5e96, #6f6fb1);
+  box-shadow: 0 0 0.2em #2b2b44;
+}
+input[type=button].obsidian:hover:not(.flat),
+input[type=submit].obsidian:hover:not(.flat),
+input[type=reset].obsidian:hover:not(.flat),
+button.obsidian:hover:not(.flat),
+a.button.obsidian:hover:not(.flat),
+select.obsidian:hover:not(.flat),
+:not(.flat) input[type=button].obsidian:hover,
+:not(.flat) input[type=submit].obsidian:hover,
+:not(.flat) input[type=reset].obsidian:hover,
+:not(.flat) button.obsidian:hover,
+:not(.flat) a.button.obsidian:hover,
+:not(.flat) select.obsidian:hover {
   text-shadow: 1px 1px 0 #333366;
 }
-input[type=button].obsidian:active,
-input[type=submit].obsidian:active,
-input[type=reset].obsidian:active,
-button.obsidian:active,
-a.button.obsidian:active,
-select.obsidian:active {
+input[type=button].obsidian:active :not(.flat),
+input[type=submit].obsidian:active :not(.flat),
+input[type=reset].obsidian:active :not(.flat),
+button.obsidian:active :not(.flat),
+a.button.obsidian:active :not(.flat),
+select.obsidian:active :not(.flat) {
   box-shadow: inset 0 0 3px #39395b;
+}
+input[type=button].obsidian:active .flat,
+input[type=submit].obsidian:active .flat,
+input[type=reset].obsidian:active .flat,
+button.obsidian:active .flat,
+a.button.obsidian:active .flat,
+select.obsidian:active .flat {
+  background: linear-gradient(to bottom, #444477, #444477);
 }
 input[type=button].obsidian:focus,
 input[type=submit].obsidian:focus,
@@ -534,11 +1061,35 @@ button.black,
 a.button.black,
 select.black {
   background-color: #333;
-  background: linear-gradient(to bottom, #474747, #292929);
+  background: linear-gradient(to bottom, hsl(0, 0%, 28%), hsl(0, 0%, 16%));
   border-color: #242424;
-  box-shadow: inset 0 0 2px #8f8f8f;
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 1px 1px 0 #292929;
+  text-shadow: 1px 1px 0 hsl(0, 0%, 16%);
+}
+input[type=button].black.flat,
+input[type=submit].black.flat,
+input[type=reset].black.flat,
+button.black.flat,
+a.button.black.flat,
+select.black.flat,
+.flat input[type=button].black,
+.flat input[type=submit].black,
+.flat input[type=reset].black,
+.flat button.black,
+.flat a.button.black,
+.flat select.black {
+  border: none;
+  box-shadow: 0 0 2px 1;
+  background: #333;
+  text-shadow: none;
+}
+input[type=button].black :not(.flat),
+input[type=submit].black :not(.flat),
+input[type=reset].black :not(.flat),
+button.black :not(.flat),
+a.button.black :not(.flat),
+select.black :not(.flat) {
+  box-shadow: inset 0 0 2px #8f8f8f;
 }
 input[type=button].black:hover,
 input[type=submit].black:hover,
@@ -546,16 +1097,52 @@ input[type=reset].black:hover,
 button.black:hover,
 a.button.black:hover,
 select.black:hover {
-  background: linear-gradient(to bottom, #525252, #333333);
+  background: linear-gradient(to bottom, hsl(0, 0%, 32%), hsl(0, 0%, 20%));
+}
+input[type=button].black:hover.flat,
+input[type=submit].black:hover.flat,
+input[type=reset].black:hover.flat,
+button.black:hover.flat,
+a.button.black:hover.flat,
+select.black:hover.flat,
+.flat input[type=button].black:hover,
+.flat input[type=submit].black:hover,
+.flat input[type=reset].black:hover,
+.flat button.black:hover,
+.flat a.button.black:hover,
+.flat select.black:hover {
+  background: linear-gradient(to bottom, #383838, #424242);
+  box-shadow: 0 0 0.2em #1a1a1a;
+}
+input[type=button].black:hover:not(.flat),
+input[type=submit].black:hover:not(.flat),
+input[type=reset].black:hover:not(.flat),
+button.black:hover:not(.flat),
+a.button.black:hover:not(.flat),
+select.black:hover:not(.flat),
+:not(.flat) input[type=button].black:hover,
+:not(.flat) input[type=submit].black:hover,
+:not(.flat) input[type=reset].black:hover,
+:not(.flat) button.black:hover,
+:not(.flat) a.button.black:hover,
+:not(.flat) select.black:hover {
   text-shadow: 1px 1px 0 #111111;
 }
-input[type=button].black:active,
-input[type=submit].black:active,
-input[type=reset].black:active,
-button.black:active,
-a.button.black:active,
-select.black:active {
+input[type=button].black:active :not(.flat),
+input[type=submit].black:active :not(.flat),
+input[type=reset].black:active :not(.flat),
+button.black:active :not(.flat),
+a.button.black:active :not(.flat),
+select.black:active :not(.flat) {
   box-shadow: inset 0 0 3px #222222;
+}
+input[type=button].black:active .flat,
+input[type=submit].black:active .flat,
+input[type=reset].black:active .flat,
+button.black:active .flat,
+a.button.black:active .flat,
+select.black:active .flat {
+  background: linear-gradient(to bottom, #222222, #222222);
 }
 input[type=button].black:focus,
 input[type=submit].black:focus,
@@ -595,9 +1182,9 @@ select.smaller,
 .smaller button,
 .smaller a.button,
 .smaller select {
-  font-size: 9px;
-  height: 20px;
-  line-height: 18px;
+  font-size: 10.4px;
+  height: 24.8px;
+  line-height: 22.8px;
 }
 input[type=button].small,
 input[type=submit].small,
@@ -611,12 +1198,9 @@ select.small,
 .small button,
 .small a.button,
 .small select {
-  font-size: 10px;
-  height: 24px;
-  line-height: 22px;
-  font-size: 11px;
-  height: 26px;
-  line-height: 24px;
+  font-size: 11.7px;
+  height: 27.4px;
+  line-height: 25.4px;
 }
 input[type=button].big,
 input[type=submit].big,
@@ -630,9 +1214,9 @@ select.big,
 .big button,
 .big a.button,
 .big select {
-  font-size: 15px;
-  height: 32px;
-  line-height: 30px;
+  font-size: 15.6px;
+  height: 35.2px;
+  line-height: 33.2px;
 }
 input[type=button].bigger,
 input[type=submit].bigger,
@@ -646,16 +1230,16 @@ select.bigger,
 .bigger button,
 .bigger a.button,
 .bigger select {
-  font-size: 18px;
-  height: 40px;
-  line-height: 38px;
+  font-size: 19.5px;
+  height: 43px;
+  line-height: 41px;
 }
 /* CHECKBOX, RADIO */
 input[type=checkbox],
 input[type=radio] {
-  width: 20px;
-  height: 20px;
-  line-height: 28px;
+  width: 23.4px;
+  height: 23.4px;
+  line-height: 21.4px;
 }
 input[type=checkbox]:focus,
 input[type=radio]:focus {
@@ -664,54 +1248,51 @@ input[type=radio]:focus {
 }
 .smaller input[type=checkbox],
 .smaller input[type=radio] {
-  width: 14px;
-  height: 14px;
-  line-height: 20px;
+  width: 22.72px;
+  height: 22.72px;
+  line-height: 22.72px;
 }
 .small input[type=checkbox],
 .small input[type=radio] {
-  width: 16px;
-  height: 16px;
-  line-height: 24px;
+  width: 25.06px;
+  height: 25.06px;
+  line-height: 25.06px;
 }
 .big input[type=checkbox],
 .big input[type=radio] {
-  width: 24px;
-  height: 24px;
-  line-height: 32px;
+  width: 32.08px;
+  height: 32.08px;
+  line-height: 32.08px;
 }
 .bigger input[type=checkbox],
 .bigger input[type=radio] {
-  width: 30px;
-  height: 30px;
-  line-height: 40px;
+  width: 39.1px;
+  height: 39.1px;
+  line-height: 39.1px;
 }
 label.smaller,
 .smaller label {
-  font-size: 9px;
-  height: 20px;
-  line-height: 18px;
+  font-size: 10.4px;
+  height: 24.8px;
+  line-height: 22.8px;
 }
 label.small,
 .small label {
-  font-size: 10px;
-  height: 24px;
-  line-height: 22px;
-  font-size: 11px;
-  height: 26px;
-  line-height: 24px;
+  font-size: 11.7px;
+  height: 27.4px;
+  line-height: 25.4px;
 }
 label.big,
 .big label {
-  font-size: 15px;
-  height: 32px;
-  line-height: 30px;
+  font-size: 15.6px;
+  height: 35.2px;
+  line-height: 33.2px;
 }
 label.bigger,
 .bigger label {
-  font-size: 18px;
-  height: 40px;
-  line-height: 38px;
+  font-size: 19.5px;
+  height: 43px;
+  line-height: 41px;
 }
 /* TEXT INPUTS */
 input[type=text],
@@ -721,14 +1302,14 @@ input[type=password] {
   border-radius: 3px;
   box-sizing: border-box;
   background-color: #fff;
-  border-color: #b1b1b1;
-  padding: 0 .3em;
+  border-color: #aaaaaa;
+  padding: 0 0.3em;
   cursor: text;
 }
 input[type=text]:disabled,
 input[type=password]:disabled {
-  background-color: #f8f8f8;
-  color: #a5a5a5;
+  background-color: #eee;
+  color: #9f9f9f;
 }
 input[type=text]:focus,
 input[type=password]:focus {
@@ -739,36 +1320,33 @@ input[type=text].smaller,
 input[type=password].smaller,
 .smaller input[type=text],
 .smaller input[type=password] {
-  font-size: 9px;
-  height: 20px;
-  line-height: 18px;
+  font-size: 10.4px;
+  height: 24.8px;
+  line-height: 22.8px;
 }
 input[type=text].small,
 input[type=password].small,
 .small input[type=text],
 .small input[type=password] {
-  font-size: 10px;
-  height: 24px;
-  line-height: 22px;
-  font-size: 11px;
-  height: 26px;
-  line-height: 24px;
+  font-size: 11.7px;
+  height: 27.4px;
+  line-height: 25.4px;
 }
 input[type=text].big,
 input[type=password].big,
 .big input[type=text],
 .big input[type=password] {
-  font-size: 15px;
-  height: 32px;
-  line-height: 30px;
+  font-size: 15.6px;
+  height: 35.2px;
+  line-height: 33.2px;
 }
 input[type=text].bigger,
 input[type=password].bigger,
 .bigger input[type=text],
 .bigger input[type=password] {
-  font-size: 18px;
-  height: 40px;
-  line-height: 38px;
+  font-size: 19.5px;
+  height: 43px;
+  line-height: 41px;
 }
 textarea {
   border-width: 1px;
@@ -776,14 +1354,14 @@ textarea {
   border-radius: 3px;
   box-sizing: border-box;
   background-color: #fff;
-  border-color: #b1b1b1;
-  padding: 0 .3em;
+  border-color: #aaaaaa;
+  padding: 0 0.3em;
   cursor: text;
-  padding: .3em;
+  padding: 0.3em;
 }
 textarea:disabled {
-  background-color: #f8f8f8;
-  color: #a5a5a5;
+  background-color: #eee;
+  color: #9f9f9f;
 }
 textarea:focus {
   border-color: #48d;
@@ -808,14 +1386,17 @@ div.toolstrip {
 .control-group select {
   float: left;
   border-radius: 0px;
-  border-right-width: 0;
+  margin-left: -1px;
 }
 .control-group :first-child {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  margin-left: 0;
 }
 .control-group :last-child {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  border-right-width: 1px;
+}
+.control-group :hover {
+  z-index: 11111;
 }
