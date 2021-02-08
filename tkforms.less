@@ -27,8 +27,6 @@ label
   height: 4 + @basesize * 2;
   vertical-align: middle;
   outline: none;
-  z-index: 9999;
-  &:hover { z-index: 10000; }
 }
 
 label,button,input[type=button],a.button {
@@ -62,6 +60,7 @@ textarea {
   outline: none;
   white-space: normal;
   text-decoration: none;
+  text-align: center;
   margin: 0;
   padding: 0 .5em;
   vertical-align: middle;
@@ -242,8 +241,4 @@ div.toolstrip {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   border-right-style: solid;
-}
-
-.control-group :hover {
-  z-index: 11111;
 }
